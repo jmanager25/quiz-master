@@ -13,3 +13,14 @@ body {
     background: url("../images/background.jpg") no-repeat center center fixed;
     background-size: cover;
 }
+
+h1, h2, h3 {
+    font-family: montserrat, sans-serif;
+}
+
+/* Heading */
+.heading {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px;
+}
