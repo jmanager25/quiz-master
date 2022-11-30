@@ -22,5 +22,34 @@ h1, h2, h3 {
 .heading {
     text-transform: uppercase;
     text-align: center;
-    margin: 10px;
+    margin: 20px;
+}
+
+/* Game area */
+main {
+    background-color: #56756D;
+    width: 70%;
+    margin: auto;
+    height: 550px;
+    border-radius: 20px;
+}
+
+.landing-page {
+
+}
+
+.choose-categories {
+    display: none;
+}
+
+.play-area {
+    display: none;
+}
+
+.result-area {
+    display: none;
+}
+
+.hiscores {
+    display: none;
 }
