@@ -12,6 +12,7 @@ body {
     color: #ffffff;
     background: url("../images/background.jpg") no-repeat center center fixed;
     background-size: cover;
+    font-size: 18px;
 }
 
 h1, h2, h3 {
@@ -27,29 +28,70 @@ h1, h2, h3 {
 
 /* Game area */
 main {
-    background-color: #56756D;
+    background-color: #2F2F2F;
     width: 70%;
     margin: auto;
-    height: 550px;
+    height: 500px;
     border-radius: 20px;
+    margin-top: 50px;
 }
 
+.text-align {
+    text-align: center;
+}
+
+.btn {
+    padding: 20px;
+    width: 130px;
+    border-radius: 5px;
+    background-color: #F1F2ED;
+    color: #2F2F2F;
+}
+
+/* Landing page */
 .landing-page {
-
+    height: 100%;
 }
 
+.landing-page h3 {
+    padding: 50px;
+    font-size: 25px;
+}
+
+.landing-page p {
+    margin: 20px;
+}
+
+#user-name {
+    width: 40%;
+    height: 25px;
+    border-radius: 10px;
+    margin: 50px;
+}
+
+.next-btn {
+    margin: 20px;
+}
+
+/* Choose categories section */
 .choose-categories {
     display: none;
 }
 
+
+/* Play area */
 .play-area {
     display: none;
 }
 
+
+/* Result area */
 .result-area {
     display: none;
 }
 
+
+/* Hiscore */
 .hiscores {
     display: none;
 }
