@@ -51,6 +51,7 @@ main {
 /* Landing page */
 .landing-page {
     height: 100%;
+    display: none;
 }
 
 .landing-page h3 {
@@ -75,13 +76,47 @@ main {
 
 /* Choose categories section */
 .choose-categories {
+    height: 100%;
     display: none;
 }
 
+.choose-categories h3 {
+    padding: 45px;
+    font-size: 25px;
+}
+
+.categories {
+    width: 40%;
+    height: 70px;
+    border-radius: 10px;
+    margin: 10px;
+   background-color: #F1F2ED;
+}
+
+.play-btn {
+    margin: 20px;
+}
 
 /* Play area */
 .play-area {
-    display: none;
+    height: 100%;
+}
+
+#question {
+    padding: 50px;
+}
+
+.answer-buttons {
+    margin: 50px 0 50px 0;
+
+}
+
+.answer {
+    width: 44%;
+    height: 60px;
+    margin: 10px;
+    border-radius: 15px;
+    text-align: initial;
 }
 
 
