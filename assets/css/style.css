@@ -142,12 +142,23 @@ main {
     text-align: initial;
 }
 
-/* Result area */
-.result-area {
+/* Feeback area */
+.feedback-area {
     height: 100%;
 }
 
-.resul
+.feedback {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 20px 20px;
+}
+
+.feedback-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
 
 /* Hiscore */
 .hiscores {
