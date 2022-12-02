@@ -13,6 +13,9 @@ body {
     background: url("../images/background.jpg") no-repeat center center fixed;
     background-size: cover;
     font-size: 18px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 h1, h2, h3 {
@@ -54,7 +57,7 @@ main {
     display: none;
 }
 
-.landing-page h3 {
+.landing-page h2 {
     padding: 50px;
     font-size: 25px;
 }
@@ -80,7 +83,7 @@ main {
     display: none;
 }
 
-.choose-categories h3 {
+.choose-categories h2 {
     padding: 45px;
     font-size: 25px;
 }
@@ -90,7 +93,7 @@ main {
     height: 70px;
     border-radius: 10px;
     margin: 10px;
-   background-color: #F1F2ED;
+    background-color: #F1F2ED;
 }
 
 .play-btn {
@@ -100,10 +103,30 @@ main {
 /* Play area */
 .play-area {
     height: 100%;
+    display: none;
+}
+
+.info-bar {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    font-size: 25px;
+}
+
+.sound {
+    display: flex;
+}
+
+.sound-on {
+    position: absolute;
+}
+
+.timer-container {
+    display: flex;
 }
 
 #question {
-    padding: 50px;
+    margin: 40px;
 }
 
 .answer-buttons {
@@ -119,12 +142,12 @@ main {
     text-align: initial;
 }
 
-
 /* Result area */
 .result-area {
-    display: none;
+    height: 100%;
 }
 
+.resul
 
 /* Hiscore */
 .hiscores {
