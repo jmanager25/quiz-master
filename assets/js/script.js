@@ -2,7 +2,7 @@
 // Landing page
 const rules = document.getElementById("rules");
 const play = document.getElementById("play");
-let hiscore = document.getElementsByClassName("hiscore");
+let hiscoreBtn = document.getElementsByClassName("hiscore");
 const landingPage = document.getElementById("initial-page");
 let userName = document.getElementById("username");
 
