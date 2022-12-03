@@ -21,12 +21,12 @@
             <div class="text-align">
                 <input class="text-align" type="text" id="user-name" placeholder="Name" required>
             </div>
-            <div class="text-align next-btn">
-                <button class="btn">Next</button>
+            <div class="text-align play-btn">
+                <button id="play" class="btn">Play</button>
             </div>
             <div class="text-align">
-                <button class="btn">Rules</button>
-                <button class="btn">Hiscore</button>
+                <button id="rules" class="btn">Rules</button>
+                <button id="hiscore" class="btn">Hiscore</button>
             </div>
         </section>
         <!-- Choose categories section -->
@@ -40,29 +40,26 @@
                 <button id="art-literature" class="categories">Art & Literature</button>
                 <button id="geography" class="categories">Geography</button>
             </div>
-           <div class="text-align play-btn">
-                <button class="btn">Play</button>
-           </div>
         </section>
         <!-- Play area -->
         <section class="play-area">
             <div class="info-bar">
                 <div class="sound">
-                    <div class="sound-on"><i class="fa-solid fa-volume-high"></i></div>
-                    <div class="sound-of"><i class="fa-solid fa-volume-xmark"></i></div>
+                    <div id="sound-on"><i class="fa-solid fa-volume-high"></i></div>
+                    <div id="sound-off"><i class="fa-solid fa-volume-xmark"></i></div>
                 </div>
                 <div class="timer-container">
-                    <div class="timer">30</div>
+                    <div id="timer">30</div>
                     <div class="timer-icon"><i class="fa-solid fa-stopwatch-20"></i></div>
                 </div>
-                <div class="question-number"><span class="current-question">4</span>/10</div>
+                <div class="question-number"><span id="current-question">4</span>/10</div>
             </div>
             <h3 class="text-align" id="question">Question here</h3>
             <div class="answer-buttons text-align">
-                <button class="answer"> A:</button>
-                <button class="answer"> B:</button>
-                <button class="answer"> C:</button>
-                <button class="answer"> D:</button>
+                <button id="asnwerA" class="answer"> A:</button>
+                <button id="asnwerB" class="answer"> B:</button>
+                <button id="asnwerC" class="answer"> C:</button>
+                <button id="asnwerD" class="answer"> D:</button>
             </div>
             <div class="text-align">
                 <button class="btn" id="next-question">Next</button>

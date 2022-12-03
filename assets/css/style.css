@@ -69,7 +69,7 @@ main {
     margin: 50px;
 }
 
-.next-btn {
+.play-btn {
    margin-bottom: 30px;
 }
 
@@ -108,7 +108,7 @@ main {
     display: flex;
 }
 
-.sound-on {
+#sound-on {
     position: absolute;
 }
 
@@ -116,7 +116,7 @@ main {
     display: flex;
 }
 
-.timer { 
+#timer { 
     margin-right: 5px;
 }
 
