@@ -84,15 +84,11 @@ main {
 }
 
 .categories {
-    width: 40%;
-    height: 70px;
+    width: 45%;
+    padding: 30px;
     border-radius: 10px;
     margin: 10px;
     background-color: #F1F2ED;
-}
-
-.play-btn {
-    margin: 20px;
 }
 
 /* Play area */
