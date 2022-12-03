@@ -39,6 +39,10 @@ main {
     margin-top: 50px;
 }
 
+.display {
+    display: none;
+}
+
 .text-align {
     text-align: center;
     margin: 20px;
@@ -55,14 +59,13 @@ main {
 /* Landing page */
 .landing-page {
     height: 100%;
-    display: none;
 }
 
 .landing-page h2 {
     margin: 50px;
 }
 
-#user-name {
+#username {
     width: 60%;
     padding: 8px;
     border-radius: 5px;
@@ -76,7 +79,6 @@ main {
 /* Choose categories section */
 .choose-categories {
     height: 100%;
-    display: none;
 }
 
 .choose-categories h2 {
@@ -94,7 +96,6 @@ main {
 /* Play area */
 .play-area {
     height: 100%;
-    display: none;
 }
 
 .info-bar {
@@ -140,7 +141,6 @@ main {
 /* Feeback area */
 .feedback-area {
     height: 100%;
-    display: none;
 }
 
 .feedback {
@@ -159,7 +159,6 @@ main {
 /* Hiscore */
 .hiscores {
     height: 100%;
-    display: none;
 }
 
 .names-container {
