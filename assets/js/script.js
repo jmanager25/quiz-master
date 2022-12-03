@@ -4,6 +4,7 @@ const rules = document.getElementById("rules");
 const play = document.getElementById("play");
 let hiscore = document.getElementsByClassName("hiscore");
 const landingPage = document.getElementById("initial-page");
+let userName = document.getElementById("username");
 
 // Categories
 const history = document.getElementById("history");
@@ -36,9 +37,15 @@ const feedbackPage = document.getElementById("feedback-page");
 const close = document.getElementById("close")
 const hiscorePage = document.getElementById("hiscore-page");
 
-// Add username to the localStorage
-function storeUsername () {
-    let username = document.getElementById("username").value;
-    localStorage.setItem("Player", username);
-}
+/* Add username to the localStorage, hides the landing page and shows up the categories page */
+play.addEventListener("click", function () {
+    let playerName = userName.value;
+    if (playerName) {
+        localStorage.setItem("Name", playerName);
+        landingPage.classList.add("display");
+        categoriesPage.classList.remove("display");
+    }
+})
+
+
 
