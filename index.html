@@ -18,7 +18,7 @@
         <section id="initial-page" class="landing-page">
             <h2 class="text-align ">Welcome to quiz master!</h2>
             <p class="text-align ">Enter your name below and test your knowledge.</p>
-            <form action="">
+            <form action="" onsubmit="storeUsername()">
                 <div class="text-align">
                     <label for="username"></label>
                     <input class="text-align" type="text" id="username" placeholder="Name" required>
@@ -33,7 +33,7 @@
             </div>
         </section>
         <!-- Choose categories section -->
-        <section id="categorie-page" class="choose-categories display">
+        <section id="categories-page" class="choose-categories display">
             <h2 class="text-align">Choose a category:</h2>
             <div class="text-align categories-container">
                 <button id="history" class="categories">History</button>

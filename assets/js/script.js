@@ -3,6 +3,7 @@
 const rules = document.getElementById("rules");
 const play = document.getElementById("play");
 let hiscore = document.getElementsByClassName("hiscore");
+const landingPage = document.getElementById("initial-page");
 
 // Categories
 const history = document.getElementById("history");
@@ -11,6 +12,7 @@ const science = document.getElementById("science");
 const musicCinema = document.getElementById("music-cinema");
 const geography = document.getElementById("geography");
 const artLiterature = document.getElementById("art-literatue");
+const categoriesPage = document.getElementById("categories-page");
 
 // Play area
 const soundOn = document.getElementById("sound-on");
@@ -22,14 +24,21 @@ const answerB = document.getElementById("answerB");
 const answerC = document.getElementById("answerC");
 const answerD = document.getElementById("answerD");
 const nextQuestion = document.getElementById("next-question");
+const playArea = document.getElementById("playArea");
 
 // Feedback area
 let feedbackQuestion = document.getElementsByClassName("feedback-content-question");
 let feedbackAnswer = document.getElementsByClassName("feedback-content-result");
 const playAgain = document.getElementById("play-again");
+const feedbackPage = document.getElementById("feedback-page");
 
 // Hiscore
 const close = document.getElementById("close")
+const hiscorePage = document.getElementById("hiscore-page");
 
-
+// Add username to the localStorage
+function storeUsername () {
+    let username = document.getElementById("username").value;
+    localStorage.setItem("Player", username);
+}
 
