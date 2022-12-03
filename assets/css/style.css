@@ -80,8 +80,7 @@ main {
 }
 
 .choose-categories h2 {
-    padding: 45px;
-    font-size: 25px;
+    margin: 40px;
 }
 
 .categories {
