@@ -80,7 +80,7 @@ main {
 }
 
 .choose-categories h2 {
-    margin: 50px;
+    margin: 40px;
 }
 
 .categories {
@@ -140,6 +140,7 @@ main {
 /* Feeback area */
 .feedback-area {
     height: 100%;
+    display: none;
 }
 
 .feedback {
@@ -157,5 +158,17 @@ main {
 
 /* Hiscore */
 .hiscores {
+    height: 100%;
     display: none;
+}
+
+.names-container {
+    margin: 50px;
+    font-size: 20px;
+}
+
+.score-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px;
 }
