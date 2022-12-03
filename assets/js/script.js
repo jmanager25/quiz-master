@@ -2,7 +2,7 @@
 // Landing page
 const rules = document.getElementById("rules");
 const play = document.getElementById("play");
-const hiscore = document.getElementById("hiscore");
+let hiscore = document.getElementsByClassName("hiscore");
 
 // Categories
 const history = document.getElementById("history");
@@ -22,3 +22,11 @@ const answerB = document.getElementById("answerB");
 const answerC = document.getElementById("answerC");
 const answerD = document.getElementById("answerD");
 const nextQuestion = document.getElementById("next-question");
+
+// Feedback area
+let feedbackQuestion = document.getElementsByClassName("feedback-content-question");
+let feedbackAnswer = document.getElementsByClassName("feedback-content-result");
+const playAgain = document.getElementById("play-again");
+
+// Hiscore
+const close = document.getElementById("close")
