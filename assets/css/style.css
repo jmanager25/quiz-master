@@ -171,3 +171,23 @@ main {
     justify-content: space-around;
     margin: 40px;
 }
+
+/* Rules Section */
+
+#rules-section {
+    height: 100%;
+    margin: 20px;
+}
+
+.rules-section h2 {
+    margin: 50px;
+}
+
+.rules-content {
+    margin: 20px;
+    text-align: justify;
+}
+
+.rules-section button {
+    margin-top: 50px;
+}
