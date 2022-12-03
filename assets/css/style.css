@@ -41,6 +41,7 @@ main {
 
 .text-align {
     text-align: center;
+    margin: 20px;
 }
 
 .btn {
@@ -58,23 +59,18 @@ main {
 }
 
 .landing-page h2 {
-    padding: 50px;
-    font-size: 25px;
-}
-
-.landing-page p {
-    margin: 20px;
+    margin: 50px;
 }
 
 #user-name {
-    width: 40%;
-    height: 25px;
-    border-radius: 10px;
+    width: 60%;
+    padding: 8px;
+    border-radius: 5px;
     margin: 50px;
 }
 
 .next-btn {
-    margin: 20px;
+   margin-bottom: 30px;
 }
 
 /* Choose categories section */
@@ -123,6 +119,10 @@ main {
 
 .timer-container {
     display: flex;
+}
+
+.timer { 
+    margin-right: 5px;
 }
 
 #question {
