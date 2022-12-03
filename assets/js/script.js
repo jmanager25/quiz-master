@@ -2,7 +2,7 @@
 // Landing page
 const rules = document.getElementById("rules");
 const play = document.getElementById("play");
-let hiscoreBtn = document.getElementsByClassName("hiscore");
+let hiscoreBtn = document.getElementById("hiscore-button");
 const landingPage = document.getElementById("initial-page");
 let userName = document.getElementById("username");
 
@@ -37,7 +37,10 @@ const feedbackPage = document.getElementById("feedback-page");
 const close = document.getElementById("close")
 const hiscorePage = document.getElementById("hiscore-page");
 
-/* Add username to the localStorage, hides the landing page and shows up the categories page */
+// Rules 
+const rulesPage = document.getElementById("rules-section");
+
+// Add username to the localStorage, hides the landing page and shows up the categories page 
 play.addEventListener("click", function () {
     let playerName = userName.value;
     if (playerName) {
@@ -47,5 +50,17 @@ play.addEventListener("click", function () {
     }
 })
 
+// shows the rules page and the hiscore page when users click the rules and the hiscore button
+function viewPages () {
+    rules.addEventListener("click", function () {
+        landingPage.classList.add("display");
+        rulesPage.classList.remove("display");
+    })
+
+    hiscoreBtn.addEventListener("click", function () {
+        landingPage.classList.add("display");
+        hiscorePage.classList.remove("display");
+    })
+}
 
 
