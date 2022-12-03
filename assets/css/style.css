@@ -80,7 +80,7 @@ main {
 }
 
 .choose-categories h2 {
-    margin: 40px;
+    margin: 50px;
 }
 
 .categories {
@@ -101,7 +101,7 @@ main {
     display: flex;
     justify-content: space-around;
     margin: 20px;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .sound {
@@ -121,7 +121,7 @@ main {
 }
 
 #question {
-    margin: 40px;
+    margin: 50px;
 }
 
 .answer-buttons {
@@ -130,8 +130,8 @@ main {
 }
 
 .answer {
-    width: 44%;
-    height: 60px;
+    width: 45%;
+    padding: 25px;
     margin: 10px;
     border-radius: 15px;
     text-align: initial;
