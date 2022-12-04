@@ -20,10 +20,10 @@ const soundOn = document.getElementById("sound-on");
 const SoundOff = document.getElementById("sound-off");
 let timer = document.getElementById("timer");
 const question = document.getElementById("question");
-const answerA = document.getElementById("answerA");
-const answerB = document.getElementById("answerB");
-const answerC = document.getElementById("answerC");
-const answerD = document.getElementById("answerD");
+const answerA = document.getElementById("answer-a");
+const answerB = document.getElementById("answer-b");
+const answerC = document.getElementById("answer-c");
+const answerD = document.getElementById("answer-d");
 const next = document.getElementById("next-question");
 const playArea = document.getElementById("play-area");
 const points = 10;
@@ -109,15 +109,16 @@ function runGame () {
 }
 
 /* Loops through the questions and answers and loads 
-them into the play area each time the players clicks the next button */
+them into the play area. */
 function nextQuestion () {
     for (let i = 0; i < availableQuestions.length; i++) {
         question.innerHTML = availableQuestions[i].question;
+        answerA.innerHTML = availableQuestions[i].A; 
+        answerB.innerHTML = availableQuestions[i].B;
+        answerC.innerHTML = availableQuestions[i].C; 
+        answerD.innerHTML = availableQuestions[i].D;
     }
-
-   
-
-    }
+}
 
    
 runGame();
