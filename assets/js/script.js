@@ -30,10 +30,9 @@ const points = 10;
 const totalQuestions = 10;
 let score = 0;
 let availableQuestions = [];
-let sortQuestion = 0;
+let sortQuestion = [];
 let acceptingAnswers = true;
 let questionNumber = 0;
-let currentQuestion = {};
 
 // Feedback area
 let feedbackQuestion = document.getElementsByClassName("feedback-content-question");
@@ -83,20 +82,19 @@ function getQuestions () {
             // Sorts the categories questions based on their data type
             if (this.getAttribute('data-type') === "history") {
                 sortQuestion = historyQuestions.sort();
-                availableQuestions = sortQuestion;
-                console.log(availableQuestions);
+                askRamdomQuestion();          
                 runGame();
             } else if (this.getAttribute('data-type') === "sports") {
                 sortQuestion = sportsQuestions.sort();
-                availableQuestions = sortQuestion;
+                askRamdomQuestion();
                 runGame();
             } else if (this.getAttribute('data-type') === "science") {
                 sortQuestion = scienceQuestions.sort();
-                availableQuestions = sortQuestion;
+                askRamdomQuestion();
                 runGame();
             } else if (this.getAttribute('data-type') === "geography") {
                 sortQuestion = geographyQuestions.sort();
-                availableQuestions = sortQuestion;
+                askRamdomQuestion();
                 runGame();
         }
         })
@@ -117,8 +115,15 @@ function nextQuestion () {
         answerB.innerHTML = availableQuestions[i].B;
         answerC.innerHTML = availableQuestions[i].C; 
         answerD.innerHTML = availableQuestions[i].D;
+        questionNumber++
     }
 }
 
    
 runGame();
+
+// function that goes to all the questions and returns random questions
+function askRamdomQuestion () {
+    const index = Math.floor(Math.random() * sortQuestion.length);
+    availableQuestions = sortQuestion.splice(index, 1);
+}
