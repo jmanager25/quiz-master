@@ -24,12 +24,16 @@ const answerA = document.getElementById("answerA");
 const answerB = document.getElementById("answerB");
 const answerC = document.getElementById("answerC");
 const answerD = document.getElementById("answerD");
-const nextQuestion = document.getElementById("next-question");
+const next = document.getElementById("next-question");
 const playArea = document.getElementById("play-area");
+const points = 10;
+const totalQuestions = 10;
 let score = 0;
 let availableQuestions = {};
-let sortQuestion = 0
+let sortQuestion = 0;
 let acceptingAnswers = true;
+let questionNumber = 0;
+
 
 // Feedback area
 let feedbackQuestion = document.getElementsByClassName("feedback-content-question");
@@ -76,15 +80,27 @@ function getQuestions () {
             categoriesPage.classList.add("display");
             playArea.classList.remove("display");
             if (this.getAttribute('data-type') === "history") {
-                sortQuestion = historyQuestions.sort(() => Math.random());
+                sortQuestion = historyQuestions.sort();
+                availableQuestions = sortQuestion;
             } else if (this.getAttribute('data-type') === "sports") {
-                sortQuestion = historyQuestions.sort(() => Math.random());
+                sortQuestion = sportsQuestions.sort();
+                availableQuestions = sortQuestion;
             } else if (this.getAttribute('data-type') === "science") {
-                sortQuestion = historyQuestions.sort(() => Math.random());
+                sortQuestion = scienceQuestions.sort();
+                availableQuestions = sortQuestion;
             } else if (this.getAttribute('data-type') === "geography") {
-                sortQuestion = historyQuestions.sort(() => Math.random());
+                sortQuestion = geographyQuestions.sort();
+                availableQuestions = sortQuestion;
            }
         })
     }
 }
 
+function runGame () {
+
+}
+
+
+function nextQuestion () {
+    
+}
