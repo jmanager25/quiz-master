@@ -29,11 +29,11 @@ const playArea = document.getElementById("play-area");
 const points = 10;
 const totalQuestions = 10;
 let score = 0;
-let availableQuestions = {};
+let availableQuestions = [];
 let sortQuestion = 0;
 let acceptingAnswers = true;
 let questionNumber = 0;
-
+let currentQuestion = {};
 
 // Feedback area
 let feedbackQuestion = document.getElementsByClassName("feedback-content-question");
@@ -71,36 +71,53 @@ function viewPages () {
     })
 }
 
-/* When player clicks on desired categories, hides the categories page, displays the
-play area, loops through the questions and sorts the corresponding categories questions */
+/* When player clicks on desired categorie, hides the categories page, displays the
+play area, sorts the corresponding categories questions */
 function getQuestions () {
     let categories = document.getElementsByClassName("categories");
+    // Hides categories page when clicked and shows play are page
     for (let categorie of categories) {
         categorie.addEventListener("click", function () {
             categoriesPage.classList.add("display");
             playArea.classList.remove("display");
+            // Sorts the categories questions based on their data type
             if (this.getAttribute('data-type') === "history") {
                 sortQuestion = historyQuestions.sort();
                 availableQuestions = sortQuestion;
+                console.log(availableQuestions);
+                runGame();
             } else if (this.getAttribute('data-type') === "sports") {
                 sortQuestion = sportsQuestions.sort();
                 availableQuestions = sortQuestion;
+                runGame();
             } else if (this.getAttribute('data-type') === "science") {
                 sortQuestion = scienceQuestions.sort();
                 availableQuestions = sortQuestion;
+                runGame();
             } else if (this.getAttribute('data-type') === "geography") {
                 sortQuestion = geographyQuestions.sort();
                 availableQuestions = sortQuestion;
-           }
+                runGame();
+        }
         })
     }
 }
 
 function runGame () {
-
-}
-
-
-function nextQuestion () {
     
+    nextQuestion();
 }
+
+/* Loops through the questions and answers and loads 
+them into the play area each time the players clicks the next button */
+function nextQuestion () {
+    for (let i = 0; i < availableQuestions.length; i++) {
+        question.innerHTML = availableQuestions[i].question;
+    }
+
+   
+
+    }
+
+   
+runGame();

@@ -7,7 +7,7 @@ const historyQuestions = [
         B : "France and England",
         C : "USA and Canada",
         D : "Portugal and Guinea",
-        Answer : "A"  
+        Answer : "A", 
     },
     {
         question : "In which year did Hitler commit suicide?",
