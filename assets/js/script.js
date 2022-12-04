@@ -25,7 +25,11 @@ const answerB = document.getElementById("answerB");
 const answerC = document.getElementById("answerC");
 const answerD = document.getElementById("answerD");
 const nextQuestion = document.getElementById("next-question");
-const playArea = document.getElementById("playArea");
+const playArea = document.getElementById("play-area");
+let score = 0;
+let availableQuestions = {};
+let sortQuestion = 0
+let acceptingAnswers = true;
 
 // Feedback area
 let feedbackQuestion = document.getElementsByClassName("feedback-content-question");
@@ -63,4 +67,24 @@ function viewPages () {
     })
 }
 
+/* When player clicks on desired categories, hides the categories page, displays the
+play area, loops through the questions and sorts the corresponding categories questions */
+function getQuestions () {
+    let categories = document.getElementsByClassName("categories");
+    for (let categorie of categories) {
+        categorie.addEventListener("click", function () {
+            categoriesPage.classList.add("display");
+            playArea.classList.remove("display");
+            if (this.getAttribute('data-type') === "history") {
+                sortQuestion = historyQuestions.sort(() => Math.random());
+            } else if (this.getAttribute('data-type') === "sports") {
+                sortQuestion = historyQuestions.sort(() => Math.random());
+            } else if (this.getAttribute('data-type') === "science") {
+                sortQuestion = historyQuestions.sort(() => Math.random());
+            } else if (this.getAttribute('data-type') === "geography") {
+                sortQuestion = historyQuestions.sort(() => Math.random());
+           }
+        })
+    }
+}
 

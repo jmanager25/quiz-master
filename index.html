@@ -36,12 +36,12 @@
         <section id="categories-page" class="choose-categories display">
             <h2 class="text-align">Choose a category:</h2>
             <div class="text-align categories-container">
-                <button id="history" class="categories">History</button>
-                <button id="sports" class="categories">Sports</button>
-                <button id="science" class="categories">Science</button>
-                <button id="music-cinema" class="categories">Music & Cinema</button>
-                <button id="art-literature" class="categories">Art & Literature</button>
-                <button id="geography" class="categories">Geography</button>
+                <button data-type="history" class="categories" onclick="getQuestions()">History</button>
+                <button data-type="sports" class="categories" onclick="getQuestions()">Sports</button>
+                <button data-type="science" class="categories" onclick="getQuestions()">Science</button>
+                <button data-type="music-cinema" class="categories">Music & Cinema</button>
+                <button data-type="art-literature" class="categories">Art & Literature</button>
+                <button data-type="geography" class="categories" onclick="getQuestions()">Geography</button>
             </div>
         </section>
         <!-- Play area -->
@@ -162,8 +162,9 @@
         </section>
     </main>
     
-    <!-- JavaScript file -->
+    <!-- JavaScript files -->
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/questions.js"></script>
 
     <!-- FontAwesome script-->
     <script src="https://kit.fontawesome.com/d2c05d750e.js" crossorigin="anonymous"></script>
