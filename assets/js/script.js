@@ -26,7 +26,8 @@ const answerC = document.getElementById("answer-c");
 const answerD = document.getElementById("answer-d");
 const next = document.getElementById("next-question");
 const playArea = document.getElementById("play-area");
-let questionNumber = 0;
+let questionNumber = document.getElementById("question-number");
+let questionCounter = 0;
 const points = 10;
 let totalQuestions = 10;
 let score = 0;
@@ -110,7 +111,8 @@ function askRamdomQuestion () {
 /* Loops through the questions and answers and loads 
 them into the play area. */
 function loadQuestion () {
-    questionNumber++
+    questionCounter++
+    questionNumber.innerText = questionCounter
     for (questionOption in availableQuestions) {
         question.innerHTML = availableQuestions[questionOption].question;
         answerA.innerHTML = availableQuestions[questionOption].A; 
