@@ -78,19 +78,23 @@ function getQuestions () {
         categorie.addEventListener("click", function () {
             if (this.getAttribute('data-type') === "history") {
                 sortQuestion = historyQuestions;
-                askRamdomQuestion();          
+                askRamdomQuestion();
+                playArea.classList.remove("display"); 
                 runGame();
             } else if (this.getAttribute('data-type') === "sports") {
                 sortQuestion = sportsQuestions;
                 askRamdomQuestion();
+                playArea.classList.remove("display");
                 runGame();
             } else if (this.getAttribute('data-type') === "science") {
                 sortQuestion = scienceQuestions;
                 askRamdomQuestion();
+                playArea.classList.remove("display");
                 runGame();
             } else if (this.getAttribute('data-type') === "geography") {
                 sortQuestion = geographyQuestions;
                 askRamdomQuestion();
+                playArea.classList.remove("display");
                 runGame();
         }
         })
@@ -116,10 +120,18 @@ function loadQuestion () {
     } 
 }
 
+function nextQuestion () {
+    let answerButtons = document.getElementsByClassName('answer')
+    for (let answerButton of answerButtons) {
+        answerButton.addEventListener('click', e => {
+            loadQuestion();
+        });
+    }
+}
 
 function runGame () {
     categoriesPage.classList.add("display");
-    playArea.classList.remove("display");
+    
     loadQuestion();
     totalQuestions = 10;
     questionNumber = 0;
