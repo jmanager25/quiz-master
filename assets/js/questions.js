@@ -173,30 +173,28 @@ const historyQuestions = [
 // Sports Questions
 const sportsQuestions = [
     {
-        
-    }
+        question : "The Olympics are held every how many years?",
+        A : "2 years",
+        B : "5 years",
+        C : "4 years",
+        D : "3 years",
+        Answer : "C", 
+    },
+    {
+        question : "What sport is best known as the 'king of sports'?",
+        A : "Football",
+        B : "Basketball",
+        C : "Rugby",
+        D : "Tenis",
+        Answer : "A", 
+    },
 ]
+   
 // Science Questions
 const scienceQuestions = [
-    {
-        
-    }
-]
-// Music and Cinema Questions
-const musicCinemaQuestions = [
-    {
-        
-    }
+    
 ]
 // Geography Questions
 const geographyQuestions = [
-    {
-        
-    }
-]
-// Art and Literature Questions
-const artLiteratureQuestions = [
-    {
-        
-    }
+    
 ]

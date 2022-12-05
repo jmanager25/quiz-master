@@ -26,13 +26,13 @@ const answerC = document.getElementById("answer-c");
 const answerD = document.getElementById("answer-d");
 const next = document.getElementById("next-question");
 const playArea = document.getElementById("play-area");
-questionNumber = 0;
+let questionNumber = 0;
 const points = 10;
-const totalQuestions = 10;
+let totalQuestions = 10;
 let score = 0;
-let availableQuestions = [];
+let availableQuestions = {};
 let sortQuestion = [];
-let selectanswer = true;
+let selectanswer = false;
 
 // Feedback area
 let feedbackQuestion = document.getElementsByClassName("feedback-content-question");
@@ -70,8 +70,8 @@ function viewPages () {
     })
 }
 
-/* When player clicks on desired categorie, hides the categories page, displays the
-play area, sorts the corresponding categories questions */
+/* When player clicks on desired categorie it sorts the corresponding 
+categorie questions to display on the play area */
 function getQuestions () {
     let categories = document.getElementsByClassName("categories");
     for (let categorie of categories) {
@@ -81,7 +81,7 @@ function getQuestions () {
                 askRamdomQuestion();          
                 runGame();
             } else if (this.getAttribute('data-type') === "sports") {
-                sortQuestion = sportsQuestions.sort;
+                sortQuestion = sportsQuestions;
                 askRamdomQuestion();
                 runGame();
             } else if (this.getAttribute('data-type') === "science") {
@@ -97,30 +97,36 @@ function getQuestions () {
     }
 }
 
-function runGame () {
-    categoriesPage.classList.add("display");
-    playArea.classList.remove("display");
-    nextQuestion();
-   
-}
-
-/* Loops through the questions and answers and loads 
-them into the play area. */
-function nextQuestion () {
-    for (let i = 0; i < availableQuestions.length; i++) {
-        question.innerHTML = availableQuestions[i].question;
-        answerA.innerHTML = availableQuestions[i].A; 
-        answerB.innerHTML = availableQuestions[i].B;
-        answerC.innerHTML = availableQuestions[i].C; 
-        answerD.innerHTML = availableQuestions[i].D;
-        questionNumber++
-    }
-}
-   
-runGame();
-
 // function that goes to all the questions and returns random questions
 function askRamdomQuestion () {
     const index = Math.floor(Math.random() * sortQuestion.length);
     availableQuestions = sortQuestion.splice(index, 1);
 }
+
+/* Loops through the questions and answers and loads 
+them into the play area. */
+function loadQuestion () {
+    questionNumber++
+    for (questionOption in availableQuestions) {
+        question.innerHTML = availableQuestions[questionOption].question;
+        answerA.innerHTML = availableQuestions[questionOption].A; 
+        answerB.innerHTML = availableQuestions[questionOption].B;
+        answerC.innerHTML = availableQuestions[questionOption].C; 
+        answerD.innerHTML = availableQuestions[questionOption].D;
+    } 
+}
+
+
+function runGame () {
+    categoriesPage.classList.add("display");
+    playArea.classList.remove("display");
+    loadQuestion();
+    totalQuestions = 10;
+    questionNumber = 0;
+   
+}
+
+
+   
+runGame();
+
