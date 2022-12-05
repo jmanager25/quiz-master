@@ -26,13 +26,13 @@ const answerC = document.getElementById("answer-c");
 const answerD = document.getElementById("answer-d");
 const next = document.getElementById("next-question");
 const playArea = document.getElementById("play-area");
+questionNumber = 0;
 const points = 10;
 const totalQuestions = 10;
 let score = 0;
 let availableQuestions = [];
 let sortQuestion = [];
-let acceptingAnswers = true;
-let questionNumber = 0;
+let selectanswer = true;
 
 // Feedback area
 let feedbackQuestion = document.getElementsByClassName("feedback-content-question");
@@ -74,26 +74,22 @@ function viewPages () {
 play area, sorts the corresponding categories questions */
 function getQuestions () {
     let categories = document.getElementsByClassName("categories");
-    // Hides categories page when clicked and shows play are page
     for (let categorie of categories) {
         categorie.addEventListener("click", function () {
-            categoriesPage.classList.add("display");
-            playArea.classList.remove("display");
-            // Sorts the categories questions based on their data type
             if (this.getAttribute('data-type') === "history") {
-                sortQuestion = historyQuestions.sort();
+                sortQuestion = historyQuestions;
                 askRamdomQuestion();          
                 runGame();
             } else if (this.getAttribute('data-type') === "sports") {
-                sortQuestion = sportsQuestions.sort();
+                sortQuestion = sportsQuestions.sort;
                 askRamdomQuestion();
                 runGame();
             } else if (this.getAttribute('data-type') === "science") {
-                sortQuestion = scienceQuestions.sort();
+                sortQuestion = scienceQuestions;
                 askRamdomQuestion();
                 runGame();
             } else if (this.getAttribute('data-type') === "geography") {
-                sortQuestion = geographyQuestions.sort();
+                sortQuestion = geographyQuestions;
                 askRamdomQuestion();
                 runGame();
         }
@@ -102,8 +98,10 @@ function getQuestions () {
 }
 
 function runGame () {
-    
+    categoriesPage.classList.add("display");
+    playArea.classList.remove("display");
     nextQuestion();
+   
 }
 
 /* Loops through the questions and answers and loads 
@@ -118,7 +116,6 @@ function nextQuestion () {
         questionNumber++
     }
 }
-
    
 runGame();
 
