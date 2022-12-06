@@ -191,3 +191,11 @@ main {
 .rules-section button {
     margin-top: 50px;
 }
+
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
+}

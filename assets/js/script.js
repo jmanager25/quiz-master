@@ -111,7 +111,7 @@ function askRamdomQuestion () {
 /* Loops through the questions and answers and loads 
 them into the play area. */
 function loadQuestion () {
-    questionCounter++
+    questionCounter ++
     questionNumber.innerText = questionCounter
     for (questionOption in availableQuestions) {
         question.innerHTML = availableQuestions[questionOption].question;
@@ -126,8 +126,14 @@ function nextQuestion () {
     let answerButtons = document.getElementsByClassName('answer')
     for (let answerButton of answerButtons) {
         answerButton.addEventListener('click', function () {
+            if (this.getAttribute('data-type') === availableQuestions[questionOption].Answer) {
+               this.classList.add('correct');
+            } else {
+                this.classList.add('incorrect');
+            }
             askRamdomQuestion();
-            loadQuestion();  
+            loadQuestion(); 
+          
         });
     }
 }
@@ -137,7 +143,6 @@ function runGame () {
     
     loadQuestion();
     totalQuestions = 10;
-    questionNumber = 0;
    
 }
 
