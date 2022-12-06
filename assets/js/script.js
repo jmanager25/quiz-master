@@ -125,8 +125,9 @@ function loadQuestion () {
 function nextQuestion () {
     let answerButtons = document.getElementsByClassName('answer')
     for (let answerButton of answerButtons) {
-        answerButton.addEventListener('click', e => {
-            loadQuestion();
+        answerButton.addEventListener('click', function () {
+            askRamdomQuestion();
+            loadQuestion();  
         });
     }
 }
