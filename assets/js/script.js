@@ -135,6 +135,7 @@ function nextQuestion () {
                addScore();
                setTimeout( () =>  { 
                 this.classList.remove('correct');
+                finishGame();
                 askRamdomQuestion();
                 loadQuestion(); 
                }, 2000)                
@@ -142,6 +143,7 @@ function nextQuestion () {
                this.classList.add('incorrect');
                setTimeout( () =>  { 
                 this.classList.remove('incorrect');
+                finishGame();
                 askRamdomQuestion();
                 loadQuestion(); 
                }, 2000)   
@@ -152,7 +154,6 @@ function nextQuestion () {
 
 function runGame () {
     categoriesPage.classList.add("display");
-    
     loadQuestion();
     totalQuestions = 10;
    
@@ -164,6 +165,11 @@ function addScore () {
     scorePoints.innerHTML = score
 }
 
-   
-runGame();
-
+/* When the question number reaches the total question number, hides the play area and
+display the feedback page. */
+function finishGame () {
+    if (questionCounter >= totalQuestions) {
+        playArea.classList.add('display');
+        feedbackPage.classList.remove('display');
+    }
+}
