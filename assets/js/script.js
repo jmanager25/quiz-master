@@ -141,20 +141,20 @@ function nextQuestion () {
                addScore();
                stopTimer();
                setTimeout( () =>  { 
-                this.classList.remove('correct');
-                startTimer();
-                finishGame();
-                askRamdomQuestion();
-                loadQuestion(); 
+                   this.classList.remove('correct');
+                   startTimer();
+                   finishGame();
+                   askRamdomQuestion();
+                   loadQuestion(); 
                }, 2000)                
             } else {
                this.classList.add('incorrect');
                setTimeout( () =>  { 
-                this.classList.remove('incorrect');
-                startTimer();
-                finishGame();
-                askRamdomQuestion();
-                loadQuestion(); 
+                   this.classList.remove('incorrect');
+                   startTimer();
+                   finishGame();
+                   askRamdomQuestion();
+                   loadQuestion(); 
                }, 2000)   
             }
         });
@@ -183,7 +183,15 @@ function startTimer () {
     countDown = setInterval(function () {
         timeToAnswer -= 1;
         timerDisplayer.innerHTML = timeToAnswer
-        
+        if (timeToAnswer === 0) {
+            stopTimer();
+            setTimeout( () =>  { 
+                askRamdomQuestion();
+                loadQuestion();
+                startTimer();
+                finishGame(); 
+               }, 2000)            
+        }
     }, 1000);
 }
  
