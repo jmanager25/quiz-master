@@ -141,20 +141,16 @@ main {
 /* Feeback area */
 .feedback-area {
     height: 100%;
-}
-
-.feedback {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    margin: 0 20px 20px;
 }
 
-.feedback-content {
-    display: flex;
-    justify-content: space-between;
-    margin: 5px 0;
+.feedback-area h2 {
+    font-size: 40px;
 }
+
 
 /* Hiscore */
 .hiscores {
@@ -192,6 +188,7 @@ main {
     margin-top: 50px;
 }
 
+/* check answers */
 .correct {
     background-color: green;
 }

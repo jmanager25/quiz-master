@@ -133,7 +133,7 @@ function loadQuestion () {
 /* when the players select their answer, checks if the asnwer is correct
  and moves on to the next question. */
 function nextQuestion () {
-    let answerButtons = document.getElementsByClassName('answer')
+    answerButtons = document.getElementsByClassName('answer')
     for (let answerButton of answerButtons) {
         answerButton.addEventListener('click', checkAnswer)
     }
@@ -145,21 +145,20 @@ function checkAnswer () {
         addScore();
         stopTimer(); 
         setTimeout( () =>  { 
-            this.classList.remove('correct');
+            this.classList.remove('correct');     
             startTimer();
             finishGame();
             askRamdomQuestion();
             loadQuestion();                
         }, 2000)                
     } else {
-        this.classList.add('incorrect');
+        this.classList.add('incorrect');     
         setTimeout( () =>  { 
-            this.classList.remove('incorrect');
+            this.classList.remove('incorrect');     
             startTimer();
             finishGame();
             askRamdomQuestion(); 
             loadQuestion(); 
-
         }, 2000)
     }
 }   
