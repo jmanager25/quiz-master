@@ -29,12 +29,10 @@ const playArea = document.getElementById("play-area");
 let questionNumber = document.getElementById("question-number");
 let scorePoints = document.getElementById("score-points");
 let questionCounter = 0;
-const points = 10;
 let totalQuestions = 10;
 let score = 0;
 let availableQuestions;
 let sortQuestion = [];
-let selectanswer = false;
 
 // Feedback area
 let feedbackQuestion = document.getElementsByClassName("feedback-content-question");
@@ -81,24 +79,28 @@ function getQuestions () {
             if (this.getAttribute('data-type') === "history") {
                 sortQuestion = historyQuestions;
                 askRamdomQuestion();
-                playArea.classList.remove("display"); 
-                runGame();
+                playArea.classList.remove("display");
+                categoriesPage.classList.add("display");
+                loadQuestion(); 
             } else if (this.getAttribute('data-type') === "sports") {
                 sortQuestion = sportsQuestions;
                 askRamdomQuestion();
                 playArea.classList.remove("display");
-                runGame();
+                categoriesPage.classList.add("display");
+                loadQuestion(); 
             } else if (this.getAttribute('data-type') === "science") {
                 sortQuestion = scienceQuestions;
                 askRamdomQuestion();
                 playArea.classList.remove("display");
-                runGame();
+                categoriesPage.classList.add("display");
+                loadQuestion(); 
             } else if (this.getAttribute('data-type') === "geography") {
                 sortQuestion = geographyQuestions;
                 askRamdomQuestion();
                 playArea.classList.remove("display");
-                runGame();
-        }
+                categoriesPage.classList.add("display");
+                loadQuestion(); 
+            }
         })
     }
 }
@@ -151,13 +153,6 @@ function nextQuestion () {
         });
     }
 } 
-
-function runGame () {
-    categoriesPage.classList.add("display");
-    loadQuestion();
-    totalQuestions = 10;
-   
-}
 
 /* Adds 10 points to the score each time the player gets the correct answer. */
 function addScore () {
