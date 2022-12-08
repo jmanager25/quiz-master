@@ -31,7 +31,7 @@ let questionCounter = 0;
 const points = 10;
 let totalQuestions = 10;
 let score = 0;
-let availableQuestions = {};
+let availableQuestions = [];
 let sortQuestion = [];
 let selectanswer = false;
 
@@ -102,7 +102,8 @@ function getQuestions () {
     }
 }
 
-// function that goes to all the questions and returns random questions
+/* function that goes to all the questions and returns random questions,
+code from stockoverflow - link in readme file */
 function askRamdomQuestion () {
     const index = Math.floor(Math.random() * sortQuestion.length);
     availableQuestions = sortQuestion.splice(index, 1);
