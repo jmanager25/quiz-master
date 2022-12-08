@@ -28,11 +28,14 @@ const next = document.getElementById("next-question");
 const playArea = document.getElementById("play-area");
 let questionNumber = document.getElementById("question-number");
 let scorePoints = document.getElementById("score-points");
+let timerDisplayer = document.getElementById("timer");
 let questionCounter = 0;
 let totalQuestions = 10;
 let score = 0;
 let availableQuestions;
 let sortQuestion = [];
+let timeToAnswer = 30;
+let countDown;
 
 // Feedback area
 let feedbackQuestion = document.getElementsByClassName("feedback-content-question");
@@ -82,6 +85,7 @@ function getQuestions () {
                 playArea.classList.remove("display");
                 categoriesPage.classList.add("display");
                 loadQuestion(); 
+                startTimer();
             } else if (this.getAttribute('data-type') === "sports") {
                 sortQuestion = sportsQuestions;
                 askRamdomQuestion();
@@ -135,8 +139,10 @@ function nextQuestion () {
             if (this.getAttribute('data-type') === availableQuestions[questionOption].Answer) {
                this.classList.add('correct');
                addScore();
+               stopTimer();
                setTimeout( () =>  { 
                 this.classList.remove('correct');
+                startTimer();
                 finishGame();
                 askRamdomQuestion();
                 loadQuestion(); 
@@ -145,6 +151,7 @@ function nextQuestion () {
                this.classList.add('incorrect');
                setTimeout( () =>  { 
                 this.classList.remove('incorrect');
+                startTimer();
                 finishGame();
                 askRamdomQuestion();
                 loadQuestion(); 
@@ -167,4 +174,20 @@ function finishGame () {
         playArea.classList.add('display');
         feedbackPage.classList.remove('display');
     }
+}
+
+// starts the countdown
+/* code based on a youtube tutorial - https://www.youtube.com/watch?v=ubLC1JxMqfY&ab_channel=dcode */
+function startTimer () {
+    timeToAnswer = 30;
+    countDown = setInterval(function () {
+        timeToAnswer -= 1;
+        timerDisplayer.innerHTML = timeToAnswer
+        
+    }, 1000);
+}
+ 
+// Stops the countdown
+function stopTimer () {
+    clearInterval(countDown);
 }
