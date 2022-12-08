@@ -46,6 +46,8 @@ const feedbackPage = document.getElementById("feedback-page");
 // Hiscore
 const close = document.getElementById("close")
 const hiscorePage = document.getElementById("hiscore-page");
+const totalScore = document.getElementById("total-score");
+const highScores = 'highScores';
 
 // Rules 
 const rulesPage = document.getElementById("rules-section");
@@ -174,6 +176,7 @@ display the feedback page. */
 function finishGame () {
     if (questionCounter >= totalQuestions) {
         playArea.classList.add('display');
+        localStorage.setItem('lastScore', score);
         feedbackPage.classList.remove('display');
     }
 }
@@ -201,3 +204,10 @@ function startTimer () {
 function stopTimer () {
     clearInterval(countDown);
 }
+
+// feedback Page
+let lastScore = localStorage.getItem('lastScore');
+totalScore.innerHTML = lastScore;
+
+//highscores
+
