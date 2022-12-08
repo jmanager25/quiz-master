@@ -135,31 +135,34 @@ function loadQuestion () {
 function nextQuestion () {
     let answerButtons = document.getElementsByClassName('answer')
     for (let answerButton of answerButtons) {
-        answerButton.addEventListener('click', function () {
-            if (this.getAttribute('data-type') === availableQuestions[questionOption].Answer) {
-               this.classList.add('correct');
-               addScore();
-               stopTimer();
-               setTimeout( () =>  { 
-                   this.classList.remove('correct');
-                   startTimer();
-                   finishGame();
-                   askRamdomQuestion();
-                   loadQuestion(); 
-               }, 2000)                
-            } else {
-               this.classList.add('incorrect');
-               setTimeout( () =>  { 
-                   this.classList.remove('incorrect');
-                   startTimer();
-                   finishGame();
-                   askRamdomQuestion();
-                   loadQuestion(); 
-               }, 2000)   
-            }
-        });
+        answerButton.addEventListener('click', checkAnswer)
     }
-} 
+}
+                        
+function checkAnswer () {
+    if (this.getAttribute('data-type') === availableQuestions[questionOption].Answer) {
+        this.classList.add('correct');
+        addScore();
+        stopTimer(); 
+        setTimeout( () =>  { 
+            this.classList.remove('correct');
+            startTimer();
+            finishGame();
+            askRamdomQuestion();
+            loadQuestion();                
+        }, 2000)                
+    } else {
+        this.classList.add('incorrect');
+        setTimeout( () =>  { 
+            this.classList.remove('incorrect');
+            startTimer();
+            finishGame();
+            askRamdomQuestion(); 
+            loadQuestion(); 
+
+        }, 2000)
+    }
+}   
 
 /* Adds 10 points to the score each time the player gets the correct answer. */
 function addScore () {
@@ -182,7 +185,7 @@ function startTimer () {
     timeToAnswer = 30;
     countDown = setInterval(function () {
         timeToAnswer -= 1;
-        timerDisplayer.innerHTML = timeToAnswer
+        timerDisplayer.innerHTML = timeToAnswer;
         if (timeToAnswer === 0) {
             stopTimer();
             setTimeout( () =>  { 
