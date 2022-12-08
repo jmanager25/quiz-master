@@ -123,6 +123,8 @@ function loadQuestion () {
     } 
 }
 
+/* when the players select their answer, checks if the asnwer is correct
+ and moves on to the next question. */
 function nextQuestion () {
     let answerButtons = document.getElementsByClassName('answer')
     for (let answerButton of answerButtons) {
@@ -139,8 +141,6 @@ function nextQuestion () {
                setTimeout( () =>  { 
                 this.classList.remove('incorrect');
                 askRamdomQuestion();
-                loadQuestion(); 
-            loadQuestion(); 
                 loadQuestion(); 
                }, 2000)   
             }
