@@ -31,7 +31,7 @@ let questionCounter = 0;
 const points = 10;
 let totalQuestions = 10;
 let score = 0;
-let availableQuestions = [];
+let availableQuestions;
 let sortQuestion = [];
 let selectanswer = false;
 
@@ -102,7 +102,7 @@ function getQuestions () {
     }
 }
 
-/* function that goes to all the questions and returns random questions,
+/* function that goes to all the questions and returns random questions.
 code from stockoverflow - link in readme file */
 function askRamdomQuestion () {
     const index = Math.floor(Math.random() * sortQuestion.length);
@@ -129,15 +129,24 @@ function nextQuestion () {
         answerButton.addEventListener('click', function () {
             if (this.getAttribute('data-type') === availableQuestions[questionOption].Answer) {
                this.classList.add('correct');
+               setTimeout( () =>  { 
+                this.classList.remove('correct');
+                askRamdomQuestion();
+                loadQuestion(); 
+               }, 2000)                
             } else {
-                this.classList.add('incorrect');
-            }
-            askRamdomQuestion();
+               this.classList.add('incorrect');
+               setTimeout( () =>  { 
+                this.classList.remove('incorrect');
+                askRamdomQuestion();
+                loadQuestion(); 
             loadQuestion(); 
-          
+                loadQuestion(); 
+               }, 2000)   
+            }
         });
     }
-}
+} 
 
 function runGame () {
     categoriesPage.classList.add("display");
