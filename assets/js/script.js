@@ -27,6 +27,7 @@ const answerD = document.getElementById("answer-d");
 const next = document.getElementById("next-question");
 const playArea = document.getElementById("play-area");
 let questionNumber = document.getElementById("question-number");
+let scorePoints = document.getElementById("score-points");
 let questionCounter = 0;
 const points = 10;
 let totalQuestions = 10;
@@ -131,6 +132,7 @@ function nextQuestion () {
         answerButton.addEventListener('click', function () {
             if (this.getAttribute('data-type') === availableQuestions[questionOption].Answer) {
                this.classList.add('correct');
+               addScore();
                setTimeout( () =>  { 
                 this.classList.remove('correct');
                 askRamdomQuestion();
@@ -156,6 +158,11 @@ function runGame () {
    
 }
 
+/* Adds 10 points to the score each time the player gets the correct answer. */
+function addScore () {
+    score += 10
+    scorePoints.innerHTML = score
+}
 
    
 runGame();

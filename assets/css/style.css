@@ -105,12 +105,12 @@ main {
     font-size: 20px;
 }
 
-.sound {
+.score-container {
     display: flex;
 }
 
-#sound-on {
-    position: absolute;
+#score {
+    margin-right: 10px;
 }
 
 .timer-container {
@@ -166,7 +166,7 @@ main {
     font-size: 20px;
 }
 
-.score-container {
+.result-container {
     display: flex;
     justify-content: space-around;
     margin: 40px;
