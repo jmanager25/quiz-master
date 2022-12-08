@@ -29,7 +29,7 @@
             </form>
             <div class="text-align">
                 <button id="rules" class="btn" onclick="viewPages()">Rules</button>
-                <button id="hiscore-button" class="btn hiscore" onclick="viewPages()">Hiscore</button>
+                <button id="hiscore-button" class="btn hiscore-btn" onclick="viewPages()">Hiscore</button>
             </div>
         </section>
         <!-- Choose categories section -->
@@ -69,11 +69,13 @@
             </div>
         </section>
         <!-- Feedback area -->
-        <section id="feedback-page" class="feedback-area display">
-            <h2 class="text-align">You scored <span id="total-score"></span> points</h2>
-            <div class="text-align">
-                <button id="play-again" class="btn">Play Again</button>
-                <button class="btn hiscore">Hiscore</button>
+        <section id="feedback-page" class="display">
+            <div class="feedback-area">
+                <h2 class="text-align">You scored <span id="total-score"></span> points</h2>
+                <div class="text-align">
+                    <button id="play-again" class="btn">Play Again</button>
+                    <button class="btn hiscore-btn">Hiscore</button> 
+                </div>
             </div>
         </section>
         <!-- Hiscore -->

@@ -139,6 +139,11 @@ main {
 }
 
 /* Feeback area */
+
+#feedback-page {
+    height: 100%;
+}
+
 .feedback-area {
     height: 100%;
     display: flex;
@@ -150,7 +155,6 @@ main {
 .feedback-area h2 {
     font-size: 40px;
 }
-
 
 /* Hiscore */
 .hiscores {

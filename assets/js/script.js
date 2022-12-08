@@ -5,6 +5,7 @@ const play = document.getElementById("play");
 let hiscoreBtn = document.getElementById("hiscore-button");
 const landingPage = document.getElementById("initial-page");
 let userName = document.getElementById("username");
+const hiscorePage = document.getElementById("hiscore-page");
 
 // Categories
 const history = document.getElementById("history");
@@ -42,23 +43,25 @@ let feedbackQuestion = document.getElementsByClassName("feedback-content-questio
 let feedbackAnswer = document.getElementsByClassName("feedback-content-result");
 const playAgain = document.getElementById("play-again");
 const feedbackPage = document.getElementById("feedback-page");
+const totalScore = document.getElementById("total-score");
 
 // Hiscore
 const close = document.getElementById("close")
-const hiscorePage = document.getElementById("hiscore-page");
-const totalScore = document.getElementById("total-score");
-const highScores = 'highScores';
+
+
 
 // Rules 
 const rulesPage = document.getElementById("rules-section");
 
 // Add username to the localStorage, hides the landing page and shows up the categories page 
 play.addEventListener("click", function () {
+    saveHighScore ()
     let playerName = userName.value;
     if (playerName) {
         localStorage.setItem("Name", playerName);
         landingPage.classList.add("display");
         categoriesPage.classList.remove("display");
+        saveHighScore ()
     }
 })
 
@@ -72,7 +75,7 @@ function viewPages () {
     hiscoreBtn.addEventListener("click", function () {
         landingPage.classList.add("display");
         hiscorePage.classList.remove("display");
-    })
+    }) 
 }
 
 /* When player clicks on desired categorie it sorts the corresponding 
@@ -147,8 +150,8 @@ function checkAnswer () {
         addScore();
         stopTimer(); 
         setTimeout( () =>  { 
-            this.classList.remove('correct');     
             startTimer();
+            this.classList.remove('correct');     
             finishGame();
             askRamdomQuestion();
             loadQuestion();                
@@ -156,8 +159,8 @@ function checkAnswer () {
     } else {
         this.classList.add('incorrect');     
         setTimeout( () =>  { 
-            this.classList.remove('incorrect');     
             startTimer();
+            this.classList.remove('incorrect');     
             finishGame();
             askRamdomQuestion(); 
             loadQuestion(); 
@@ -176,8 +179,9 @@ display the feedback page. */
 function finishGame () {
     if (questionCounter >= totalQuestions) {
         playArea.classList.add('display');
-        localStorage.setItem('lastScore', score);
         feedbackPage.classList.remove('display');
+        localStorage.setItem('lastScore', score);
+        checkHighScore(score);
     }
 }
 
@@ -191,9 +195,9 @@ function startTimer () {
         if (timeToAnswer === 0) {
             stopTimer();
             setTimeout( () =>  { 
+                startTimer();
                 askRamdomQuestion();
                 loadQuestion();
-                startTimer();
                 finishGame(); 
                }, 2000)            
         }
@@ -205,9 +209,26 @@ function stopTimer () {
     clearInterval(countDown);
 }
 
-// feedback Page
+// Shows last score on the feedback Page.
 let lastScore = localStorage.getItem('lastScore');
 totalScore.innerHTML = lastScore;
 
 //highscores
+const noOfHighScore = 5;
+const higherScores = 'highscores';
+const highScores = JSON.parse(localStorage.getItem(higherScores)) ?? [];
 
+function saveHighScore () {
+    const newScore = {
+        name : userName.value,
+        score : lastScore,
+    }
+    highScores.push(newScore);
+    highScores.sort((a, b) => b.score - a.score);
+    highScores.splice(noOfHighScore);
+    localStorage.setItem(higherScores, JSON.stringify(highScores));
+}
+
+function showHighScore () {
+
+}
