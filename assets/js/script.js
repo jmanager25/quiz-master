@@ -47,21 +47,19 @@ const totalScore = document.getElementById("total-score");
 
 // Hiscore
 const close = document.getElementById("close")
-
-
+const noOfHighScore = 5;
+const higherScores = 'highscores';
+const highScores = JSON.parse(localStorage.getItem(higherScores)) ?? [];
 
 // Rules 
 const rulesPage = document.getElementById("rules-section");
 
 // Add username to the localStorage, hides the landing page and shows up the categories page 
 play.addEventListener("click", function () {
-    saveHighScore ()
     let playerName = userName.value;
     if (playerName) {
-        localStorage.setItem("Name", playerName);
         landingPage.classList.add("display");
-        categoriesPage.classList.remove("display");
-        saveHighScore ()
+        categoriesPage.classList.remove("display");    
     }
 })
 
@@ -180,8 +178,7 @@ function finishGame () {
     if (questionCounter >= totalQuestions) {
         playArea.classList.add('display');
         feedbackPage.classList.remove('display');
-        localStorage.setItem('lastScore', score);
-        checkHighScore(score);
+        saveHighScore();
     }
 }
 
@@ -210,18 +207,15 @@ function stopTimer () {
 }
 
 // Shows last score on the feedback Page.
-let lastScore = localStorage.getItem('lastScore');
-totalScore.innerHTML = lastScore;
+score = localStorage.getItem(score);
+totalScore.innerHTML = score;
 
 //highscores
-const noOfHighScore = 5;
-const higherScores = 'highscores';
-const highScores = JSON.parse(localStorage.getItem(higherScores)) ?? [];
-
+/* Saves the username and the score in the localStorage */
 function saveHighScore () {
     const newScore = {
         name : userName.value,
-        score : lastScore,
+        score : score
     }
     highScores.push(newScore);
     highScores.sort((a, b) => b.score - a.score);
@@ -229,6 +223,3 @@ function saveHighScore () {
     localStorage.setItem(higherScores, JSON.stringify(highScores));
 }
 
-function showHighScore () {
-
-}
