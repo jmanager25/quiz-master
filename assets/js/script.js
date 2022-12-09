@@ -225,3 +225,11 @@ function saveHighScore () {
     localStorage.setItem(higherScores, JSON.stringify(highScores));
 }
 
+function showHighScores () {
+    const highScores = JSON.parse(localStorage.getItem(higherScores)) ?? [];
+    const highScoresList = document.getElementById("highScores-list");
+
+    highScoresList.innerHTML = highScores
+    .map( (score) => `<li class="list">${score.name} - ${score.score}</li>`)
+    .join('');
+}
