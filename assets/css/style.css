@@ -161,15 +161,12 @@ main {
     height: 100%;
 }
 
-.names-container {
-    margin: 50px;
-    font-size: 20px;
-}
-
-.result-container {
+.highScores-content {
     display: flex;
-    justify-content: space-around;
-    margin: 40px;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    height: 100%;
 }
 
 /* Rules Section */

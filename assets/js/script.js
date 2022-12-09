@@ -179,6 +179,7 @@ function finishGame () {
         playArea.classList.add('display');
         feedbackPage.classList.remove('display');
         saveHighScore();
+        showHighScores();
     }
 }
 
