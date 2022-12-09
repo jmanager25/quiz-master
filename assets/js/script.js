@@ -146,7 +146,7 @@ function checkAnswer () {
     if (this.getAttribute('data-type') === availableQuestions[questionOption].Answer) {
         this.classList.add('correct');
         addScore();
-        stopTimer(); 
+        stopTimer();
         setTimeout( () =>  { 
             startTimer();
             this.classList.remove('correct');     
@@ -155,7 +155,7 @@ function checkAnswer () {
             loadQuestion();                
         }, 2000)                
     } else {
-        this.classList.add('incorrect');     
+        this.classList.add('incorrect');
         setTimeout( () =>  { 
             startTimer();
             this.classList.remove('incorrect');     
