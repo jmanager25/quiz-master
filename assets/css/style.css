@@ -277,3 +277,76 @@ main {
         border-radius: 15px
     }
 }
+
+/* From 600px wide and down */
+
+@media screen and (max-width: 600px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    h2, h3 {
+        font-size: 16px;
+    }
+
+    /* Landing Page */
+
+    #username {
+        width: 50%;
+        padding: 5px;
+    }
+
+    /* Categories */
+
+    .categories-content h2 {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .categories-container {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        width: 65%;
+    }
+
+    .categories {
+        width: 93%;
+        margin: 10px;
+    }
+
+    /* Play Area */
+
+    .play-area-container {
+        justify-content: flex-start;
+    }
+
+    #question {
+        margin: 20px;
+    }
+
+    .answer-buttons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .answer {
+        width: 70%;
+        margin: 5px;
+    }
+
+    /* Rules */
+
+    .rules-container p {
+        font-size: 14px;
+    }
+
+    /* Feedback Area */
+
+    .feedback-area h2 {
+        font-size: 30px;
+    }
+}
