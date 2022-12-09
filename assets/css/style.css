@@ -194,7 +194,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-self: center;
+    align-content: center;
 }
 
 .rules-section h2 {
@@ -221,29 +221,3 @@ main {
 
 /* Media Queries */
 
-/* From 1500px wide and up */
-@media screen and (min-width: 1500px) {
-
-    * {
-        font-size: 20px;
-    }
-
-    h2, h3 {
-        font-size: 30px;
-    }
-
-    .btn {
-        font-size: 16px;
-    }
-
-    /* Play Area */
-    .answer {
-        margin: 15x;
-    }
-
-    .answer-buttons {
-        margin: 30px 0 30px 0;
-    }
-
-}
-    
