@@ -235,3 +235,45 @@ main {
         font-size: 18px;
     }
 }
+
+/* From 825px wide and down */
+
+@media screen and (max-width: 825px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    h2, h3 {
+        font-size: 20px;
+    }
+
+    .btn {
+        font-size: 14px;
+        width: 100px;
+        padding: 15px;
+    }
+
+    /* Categories Page */
+    
+    .choose-categories h2 {
+        font-size: 25px;
+    }
+
+    .categories {
+        width: 30%;
+        padding: 25px;
+        border-radius: 10px;
+        margin: 19px;
+        background-color: #F1F2ED;
+    }
+
+    /* Play Area */
+
+    .answer {
+        width: 40%;
+        padding: 25px;
+        margin: 10px;
+        border-radius: 15px
+    }
+}
