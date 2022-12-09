@@ -46,23 +46,25 @@
         </section>
         <!-- Play area -->
         <section id="play-area" class="play-area display">
-            <div class="info-bar">
-                <div class="score-container">
-                    <div id="score">Score:</div>
-                    <div id="score-points">0</div>
+            <div class="play-area-container">
+                <div class="info-bar">
+                    <div class="score-container">
+                        <div id="score">Score:</div>
+                        <div id="score-points">0</div>
+                    </div>
+                    <div class="timer-container">
+                        <div id="timer">30</div>
+                        <div class="timer-icon"><i class="fa-solid fa-stopwatch-20"></i></div>
+                    </div>
+                    <div><span id="question-number"></span>/10</div>
                 </div>
-                <div class="timer-container">
-                    <div id="timer">30</div>
-                    <div class="timer-icon"><i class="fa-solid fa-stopwatch-20"></i></div>
-                </div>
-                <div><span id="question-number"></span>/10</div>
-            </div>
-            <h3 class="text-align" id="question"></h3>
-            <div class="answer-buttons text-align">
-                <button data-type="A" id="answer-a" class="answer btn" onclick="nextQuestion()"> A:</button>
-                <button data-type="B" id="answer-b" class="answer btn" onclick="nextQuestion()"> B:</button>
-                <button data-type="C" id="answer-c" class="answer btn" onclick="nextQuestion()"> C:</button>
-                <button data-type="D" id="answer-d" class="answer btn" onclick="nextQuestion()"> D:</button>
+                <h3 class="text-align" id="question"></h3>
+                <div class="answer-buttons text-align">
+                    <button data-type="A" id="answer-a" class="answer btn" onclick="nextQuestion()"> A:</button>
+                    <button data-type="B" id="answer-b" class="answer btn" onclick="nextQuestion()"> B:</button>
+                    <button data-type="C" id="answer-c" class="answer btn" onclick="nextQuestion()"> C:</button>
+                    <button data-type="D" id="answer-d" class="answer btn" onclick="nextQuestion()"> D:</button>
+            </div> 
         </section>
         <!-- Feedback area -->
         <section id="feedback-page" class="display">
