@@ -34,14 +34,14 @@
         </section>
         <!-- Choose categories section -->
         <section id="categories-page" class="choose-categories display">
-            <h2 class="text-align">Choose a category:</h2>
-            <div class="text-align categories-container">
-                <button data-type="history" class="categories" onclick="getQuestions()">History</button>
-                <button data-type="sports" class="categories" onclick="getQuestions()">Sports</button>
-                <button data-type="science" class="categories" onclick="getQuestions()">Science</button>
-                <button data-type="music-cinema" class="categories">Music & Cinema</button>
-                <button data-type="art-literature" class="categories">Art & Literature</button>
-                <button data-type="geography" class="categories" onclick="getQuestions()">Geography</button>
+            <div class="categories-content">
+                <h2 class="text-align">Choose a category:</h2>
+                <div class="text-align categories-container">
+                   <button data-type="history" class="categories btn" onclick="getQuestions()">History</button>
+                   <button data-type="sports" class="categories btn" onclick="getQuestions()">Sports</button>
+                   <button data-type="science" class="categories btn" onclick="getQuestions()">Science</button>
+                   <button data-type="geography" class="categories btn" onclick="getQuestions()">Geography</button>
+                </div>
             </div>
         </section>
         <!-- Play area -->
@@ -59,10 +59,10 @@
             </div>
             <h3 class="text-align" id="question"></h3>
             <div class="answer-buttons text-align">
-                <button data-type="A" id="answer-a" class="answer" onclick="nextQuestion()"> A:</button>
-                <button data-type="B" id="answer-b" class="answer" onclick="nextQuestion()"> B:</button>
-                <button data-type="C" id="answer-c" class="answer" onclick="nextQuestion()"> C:</button>
-                <button data-type="D" id="answer-d" class="answer" onclick="nextQuestion()"> D:</button>
+                <button data-type="A" id="answer-a" class="answer btn" onclick="nextQuestion()"> A:</button>
+                <button data-type="B" id="answer-b" class="answer btn" onclick="nextQuestion()"> B:</button>
+                <button data-type="C" id="answer-c" class="answer btn" onclick="nextQuestion()"> C:</button>
+                <button data-type="D" id="answer-d" class="answer btn" onclick="nextQuestion()"> D:</button>
             </div>
             <div class="text-align">
                 <button class="btn" id="next-question">Next</button>
