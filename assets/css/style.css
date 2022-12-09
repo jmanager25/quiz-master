@@ -176,6 +176,13 @@ main {
     margin: 20px;
 }
 
+.rules-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
 .rules-section h2 {
     margin: 50px;
 }
