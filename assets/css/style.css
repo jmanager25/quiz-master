@@ -46,7 +46,6 @@ main {
 
 .text-align {
     text-align: center;
-    margin: 20px;
 }
 
 .btn {
@@ -87,7 +86,7 @@ main {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-content: center;
 }
 
@@ -113,7 +112,7 @@ main {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-content: center;
 }
 
@@ -149,7 +148,7 @@ main {
     padding: 25px;
     margin: 10px;
     border-radius: 15px;
-    text-align: initial;
+    text-align: center;
 }
 
 /* Feeback area */
@@ -168,6 +167,7 @@ main {
 
 .feedback-area h2 {
     font-size: 40px;
+    margin-bottom: 20px;
 }
 
 /* Hiscore */
@@ -183,6 +183,10 @@ main {
     height: 100%;
 }
 
+#close {
+    margin: 20px;
+}
+
 /* Rules Section */
 
 #rules-section {
@@ -193,8 +197,8 @@ main {
     display: flex;
     height: 100%;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .rules-section h2 {
@@ -301,7 +305,7 @@ main {
 
     .categories-content h2 {
         margin-bottom: 20px;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .categories-container {
@@ -323,13 +327,12 @@ main {
     }
 
     #question {
-        margin: 20px;
+        margin: 30px;
     }
 
     .answer-buttons {
         display: flex;
         flex-direction: column;
-        width: 100%;
         align-items: center;
     }
 
@@ -347,6 +350,60 @@ main {
     /* Feedback Area */
 
     .feedback-area h2 {
-        font-size: 30px;
+        font-size: 25px;
+    }
+}
+
+/* From 372px wide and down */
+
+@media screen and (max-width: 372px) {
+
+    /* Landing Page */
+
+    .play-btn {
+        margin: 10px;
+    }
+
+    .landing-page p {
+        margin: 5px;
+    }
+
+    .landing-page-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #rules {
+        margin-bottom: 10px;
+    }
+
+    #username {
+        margin: 25px;
+        width: 65%;
+    }
+
+    /* Play Area */
+
+    #score {
+        margin-right: 3px;
+    }
+
+    .answer {
+        padding: 20px;
+    }
+
+    .info-bar {
+        font-size: 14px;
+    }
+
+    #question {
+        font-size: 14px;
+    }
+
+    /* Feedback Area */
+
+    #play-again {
+        margin-bottom: 10px;
     }
 }
