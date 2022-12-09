@@ -187,11 +187,11 @@ main {
 
 #rules-section {
     height: 100%;
-    margin: 20px;
 }
 
 .rules-container {
     display: flex;
+    height: 100%;
     flex-direction: column;
     justify-content: center;
     align-content: center;
@@ -202,8 +202,8 @@ main {
 }
 
 .rules-content {
-    margin: 20px;
     text-align: justify;
+    margin: 10px;
 }
 
 .rules-section button {
@@ -221,3 +221,17 @@ main {
 
 /* Media Queries */
 
+/* From 1231px wide and down */
+
+@media screen and (max-width: 1231px) {
+
+    /* Categories Page */
+    .categories {
+        width: 30%;
+    }
+
+    /* Rules Page */
+    .rules-container p {
+        font-size: 18px;
+    }
+}
