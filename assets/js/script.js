@@ -133,15 +133,15 @@ function loadQuestion () {
     } 
 }
 
-/* when the players select their answer, checks if the asnwer is correct
- and moves on to the next question. */
+/* when the players select their answer moves on to the next question. */
 function nextQuestion () {
     answerButtons = document.getElementsByClassName('answer')
     for (let answerButton of answerButtons) {
         answerButton.addEventListener('click', checkAnswer)
     }
 }
-                        
+
+// Checks if the asnwer is correct.
 function checkAnswer () {
     if (this.getAttribute('data-type') === availableQuestions[questionOption].Answer) {
         this.classList.add('correct');
@@ -207,11 +207,12 @@ function stopTimer () {
 }
 
 // Shows last score on the feedback Page.
-score = localStorage.getItem(score);
+score = localStorage.getItem('score');
 totalScore.innerHTML = score;
 
 //highscores
-/* Saves the username and the score in the localStorage */
+/* Saves the username and the score in the localStorage.
+Code from article - https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68*/
 function saveHighScore () {
     const newScore = {
         name : userName.value,
