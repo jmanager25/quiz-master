@@ -96,7 +96,7 @@ main {
 
 .choose-categories h2 {
     margin: 40px;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .categories {
@@ -322,7 +322,7 @@ main {
     }
 
     .categories {
-        width: 30%;
+        width: 45%;
         padding: 25px;
         border-radius: 10px;
         margin: 19px;
@@ -345,6 +345,11 @@ main {
 
     body {
         font-size: 14px;
+    }
+
+    main {
+        width: 90%;
+        height: 90%;
     }
 
     h2, h3 {
@@ -375,12 +380,6 @@ main {
     .categories {
         width: 93%;
         margin: 10px;
-    }
-
-    /* Play Area */
-
-    .play-area-container {
-        justify-content: flex-start;
     }
 
     #question {
