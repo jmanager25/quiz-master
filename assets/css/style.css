@@ -68,6 +68,7 @@ main {
 
 .landing-page h2 {
     margin: 50px;
+    text-transform: capitalize;
 }
 
 #username {
@@ -97,6 +98,7 @@ main {
 .choose-categories h2 {
     margin: 40px;
     font-size: 30px;
+    text-transform: capitalize;
 }
 
 .categories {
@@ -375,7 +377,6 @@ main {
 
     #username {
         width: 50%;
-        padding: 5px;
     }
 
     /* Categories */
@@ -476,5 +477,89 @@ main {
 
     #play-again {
         margin-bottom: 10px;
+    } 
+} 
+
+/* From 500px wide and down */
+
+@media screen and (max-width: 500px) {
+
+    body {
+        font-size: 16px;
     }
+
+    main {
+        height: 98%;
+        width: 98%;
+    }
+
+    h2, h3 {
+        font-size: 18px;
+    }
+ 
+    /* Landing Page */
+
+    .landing-page h2 {
+        margin: 60px 10px 60px;
+    }
+
+    .landing-page p {
+        margin: 0 10px 30px;
+    }
+
+    #username {
+        margin: 35px 0 35px;
+        width: 70%;
+    }
+
+    #play {
+        width: 80%;
+    }
+
+    .btn {
+        width: 74%;
+    }
+
+    /* Categories */
+
+    .categories-content {
+        justify-content: center;
+    }
+
+    .categories-content h2 {
+         margin: 50px 10px 50px;
+    }
+
+    .categories-container {
+        width: 100%;
+    }
+
+    /* Play Area */
+
+    #question {
+        font-size: 18px;
+    }
+
+    /* Feedback Area */
+
+    .play-again-container {
+        width: 70%;
+    }
+
+    /* Rules */
+
+    .rules-btn-container {
+        width: 70%;
+    }
+
+    .home {
+        width: 74%;
+    }
+
+    /* HighScore */
+
+    #close {
+        width: 100px;
+    }
+
 }
