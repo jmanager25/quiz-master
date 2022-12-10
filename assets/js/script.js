@@ -45,7 +45,7 @@ const playAgain = document.getElementById("play-again");
 const feedbackPage = document.getElementById("feedback-page");
 const totalScore = document.getElementById("total-score");
 
-// Hiscore
+// Highscore
 const close = document.getElementById("close")
 const noOfHighScore = 5;
 const higherScores = 'highscores';
@@ -146,10 +146,10 @@ function nextQuestion () {
 
 // Checks if the asnwer is correct.
 function checkAnswer () {
+    stopTimer();
     if (this.getAttribute('data-type') === availableQuestions[questionOption].Answer) {
         this.classList.add('correct');
         addScore();
-        stopTimer();
         setTimeout( () =>  { 
             startTimer();
             this.classList.remove('correct');     
@@ -173,6 +173,7 @@ function checkAnswer () {
 function addScore () {
     score += 10
     scorePoints.innerHTML = score
+    totalScore.innerHTML = score
 }
 
 /* When the question number reaches the total question number, hides the play area and
@@ -207,10 +208,6 @@ function startTimer () {
 function stopTimer () {
     clearInterval(countDown);
 }
-
-// Shows last score on the feedback Page.
-score = localStorage.getItem('score');
-totalScore.innerHTML = score;
 
 //highscores
 /* Saves the username and the score in the localStorage.
