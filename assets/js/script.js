@@ -2,10 +2,10 @@
 // Landing page
 const rules = document.getElementById("rules");
 const play = document.getElementById("play");
-let hiscoreBtn = document.getElementById("hiscore-button");
+let highscoreBtn = document.getElementById("highscore-button");
 const landingPage = document.getElementById("initial-page");
 let userName = document.getElementById("username");
-const hiscorePage = document.getElementById("hiscore-page");
+const highscorePage = document.getElementById("highscore-page");
 
 // Categories
 const history = document.getElementById("history");
@@ -69,10 +69,10 @@ play.addEventListener("click", function () {
         rulesPage.classList.remove("display");
     })
 
-// shows the hiscore page when users click the hiscore button.
-    hiscoreBtn.addEventListener("click", function () {
+// shows the highscore page when users click the hiscore button.
+    highscoreBtn.addEventListener("click", function () {
         landingPage.classList.add("display");
-        hiscorePage.classList.remove("display");
+        highscorePage.classList.remove("display");
     }) 
 
 
@@ -156,7 +156,7 @@ function checkAnswer () {
             finishGame();
             askRamdomQuestion();
             loadQuestion();                
-        }, 2000)                
+        }, 1500)                
     } else {
         this.classList.add('incorrect');
         setTimeout( () =>  { 
@@ -165,7 +165,7 @@ function checkAnswer () {
             finishGame();
             askRamdomQuestion(); 
             loadQuestion(); 
-        }, 2000)
+        }, 1500)
     }
 }   
 
@@ -229,7 +229,7 @@ function saveHighScore () {
 /* Gets scores and username from the localStorage an display them on the highScore Page */
 const highScoresList = document.getElementById("highScores-list");
 
- highScoresList.innerHTML = highScores
+highScoresList.innerHTML = highScores
 .map( (score) => `<li class="list">${score.name} - ${score.score}</li>`)
 .join('');
 
@@ -239,12 +239,12 @@ for (homeBtn of homeBtns) {
     homeBtn.addEventListener("click", function() {
         landingPage.classList.remove("display");
         rulesPage.classList.add("display");
-        hiscorePage.classList.add("display");
+        highscorePage.classList.add("display");
     })
 }
 
 /* When the user clicks on play again button on feedback page, reloads the 
 page and return to home page */
 playAgain.addEventListener("click", function() {
-    window.location.assign("/#initial-page");
+    window.location.assign("/index.html");
 })
