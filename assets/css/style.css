@@ -1,6 +1,10 @@
 /* Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
 
+html {
+    height: 100%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +20,7 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    height: 100%;
 }
 
 h1, h2, h3 {
@@ -37,7 +42,6 @@ main {
     margin: auto;
     height: 500px;
     border-radius: 20px;
-    margin-top: 50px;
 }
 
 .display {
@@ -227,16 +231,45 @@ main {
 
 /* From 1231px wide and down */
 
-@media screen and (max-width: 1231px) {
+@media screen and (min-width: 1231px) {
+
+    /* Game Area */
+    main {
+        height: 600px;
+        max-width: 1200px;
+    }
+
+    /* Landing Page */
+    .landing-page h2 {
+        margin: 70px;
+    }
+
+    form {
+        margin: 20px;
+    }
+
+    .landing-page-btn {
+        margin: 50px;
+    }
 
     /* Categories Page */
     .categories {
-        width: 30%;
+        width: 50%;
     }
 
     /* Rules Page */
+    .rules-container{
+        margin: 0 20px;
+    }
+
     .rules-container p {
-        font-size: 18px;
+        font-size: 20px;
+    }
+
+    /* Play Area */
+    .answer {
+        width: 36%;
+        padding: 40px;
     }
 }
 
