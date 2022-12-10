@@ -187,6 +187,21 @@ main {
     height: 100%;
 }
 
+.highScores-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.highScores-container ul {
+    margin: 30px;
+}
+
+.highScores-container li {
+    margin-bottom: 10px;
+    list-style: none;
+}
+
 #close {
     margin: 20px;
 }

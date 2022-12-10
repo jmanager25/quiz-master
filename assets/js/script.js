@@ -63,18 +63,18 @@ play.addEventListener("click", function () {
     }
 })
 
-// shows the rules page and the hiscore page when users click the rules and the hiscore button
-function viewPages () {
+// shows the rules page when users clicks the rules button.
     rules.addEventListener("click", function () {
         landingPage.classList.add("display");
         rulesPage.classList.remove("display");
     })
 
+// shows the hiscore page when users click the hiscore button.
     hiscoreBtn.addEventListener("click", function () {
         landingPage.classList.add("display");
         hiscorePage.classList.remove("display");
     }) 
-}
+
 
 /* When player clicks on desired categorie it sorts the corresponding 
 categorie questions to display on the play area */
@@ -94,19 +94,22 @@ function getQuestions () {
                 askRamdomQuestion();
                 playArea.classList.remove("display");
                 categoriesPage.classList.add("display");
-                loadQuestion(); 
+                loadQuestion();
+                startTimer(); 
             } else if (this.getAttribute('data-type') === "science") {
                 sortQuestion = scienceQuestions;
                 askRamdomQuestion();
                 playArea.classList.remove("display");
                 categoriesPage.classList.add("display");
-                loadQuestion(); 
+                loadQuestion();
+                startTimer(); 
             } else if (this.getAttribute('data-type') === "geography") {
                 sortQuestion = geographyQuestions;
                 askRamdomQuestion();
                 playArea.classList.remove("display");
                 categoriesPage.classList.add("display");
-                loadQuestion(); 
+                loadQuestion();
+                startTimer(); 
             }
         })
     }
@@ -196,7 +199,6 @@ function startTimer () {
                 startTimer();
                 askRamdomQuestion();
                 loadQuestion();
-                finishGame(); 
                }, 2000)            
         }
     }, 1000);
@@ -239,8 +241,8 @@ homeBtns = document.getElementsByClassName("home")
 for (homeBtn of homeBtns) {
     homeBtn.addEventListener("click", function() {
         landingPage.classList.remove("display");
-        rulesPage.classList.add("display");
         feedbackPage.classList.add("display");
+        rulesPage.classList.add("display");
         hiscorePage.classList.add("display");
     })
 }
