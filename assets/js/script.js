@@ -233,3 +233,14 @@ function showHighScores () {
     .map( (score) => `<li class="list">${score.name} - ${score.score}</li>`)
     .join('');
 }
+
+/* When the users clicks on the home and play again buttons, return to the landig page */
+homeBtns = document.getElementsByClassName("home")
+for (homeBtn of homeBtns) {
+    homeBtn.addEventListener("click", function() {
+        landingPage.classList.remove("display");
+        rulesPage.classList.add("display");
+        feedbackPage.classList.add("display");
+        hiscorePage.classList.add("display");
+    })
+}
