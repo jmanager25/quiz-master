@@ -146,6 +146,7 @@ function nextQuestion () {
 
 // Checks if the asnwer is correct.
 function checkAnswer () {
+    disabled();
     stopTimer();
     if (this.getAttribute('data-type') === availableQuestions[questionOption].Answer) {
         this.classList.add('correct');
@@ -156,7 +157,7 @@ function checkAnswer () {
             finishGame();
             askRamdomQuestion();
             loadQuestion();                
-        }, 1500)                
+        }, 2000)                
     } else {
         this.classList.add('incorrect');
         setTimeout( () =>  { 
@@ -165,7 +166,7 @@ function checkAnswer () {
             finishGame();
             askRamdomQuestion(); 
             loadQuestion(); 
-        }, 1500)
+        }, 2000)
     }
 }   
 
@@ -195,6 +196,7 @@ function startTimer () {
         timerDisplayer.innerHTML = timeToAnswer;
         if (timeToAnswer === 0) {
             stopTimer();
+            disabled();
             setTimeout( () =>  { 
                 startTimer();
                 askRamdomQuestion();
@@ -245,3 +247,16 @@ page and return to home page */
 playAgain.addEventListener("click", function() {
     window.location.assign("/index.html");
 })
+
+/* Disable the buttons once the users clicks on an answers or the time runs out
+ and enables them for the next question. */
+function disabled () {
+    answerButtons = document.getElementsByClassName('answer');
+    for (let answerButton of answerButtons) {
+        answerButton.disabled = true;
+        setTimeout( () =>  { 
+           answerButton.disabled = false;
+        }, 2000)
+    }
+}
+
