@@ -245,7 +245,7 @@ for (homeBtn of homeBtns) {
 /* When the user clicks on play again button on feedback page, reloads the 
 page and return to home page */
 playAgain.addEventListener("click", function() {
-    window.location.assign("/index.html");
+    window.location.href = "index.html";
 })
 
 /* Disable the buttons once the users clicks on an answers or the time runs out
