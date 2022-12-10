@@ -180,9 +180,8 @@ display the feedback page. */
 function finishGame () {
     if (questionCounter >= totalQuestions) {
         playArea.classList.add('display');
-        feedbackPage.classList.remove('display');
-        saveHighScore();
-        showHighScores();
+        feedbackPage.classList.remove('display'); 
+        saveHighScore(); 
     }
 }
 
@@ -227,22 +226,25 @@ function saveHighScore () {
     localStorage.setItem(higherScores, JSON.stringify(highScores));
 }
 
-function showHighScores () {
-    const highScores = JSON.parse(localStorage.getItem(higherScores)) ?? [];
-    const highScoresList = document.getElementById("highScores-list");
+/* Gets scores and username from the localStorage an display them on the highScore Page */
+const highScoresList = document.getElementById("highScores-list");
 
-    highScoresList.innerHTML = highScores
-    .map( (score) => `<li class="list">${score.name} - ${score.score}</li>`)
-    .join('');
-}
+ highScoresList.innerHTML = highScores
+.map( (score) => `<li class="list">${score.name} - ${score.score}</li>`)
+.join('');
 
-/* When the users clicks on the home and play again buttons, return to the landig page */
+/* When the users clicks on the home buttons, return to the landig page */
 homeBtns = document.getElementsByClassName("home")
 for (homeBtn of homeBtns) {
     homeBtn.addEventListener("click", function() {
         landingPage.classList.remove("display");
-        feedbackPage.classList.add("display");
         rulesPage.classList.add("display");
         hiscorePage.classList.add("display");
     })
 }
+
+/* When the user clicks on play again button on feedback page, reloads the 
+page and return to home page */
+playAgain.addEventListener("click", function() {
+    window.location.assign("/#initial-page");
+})
