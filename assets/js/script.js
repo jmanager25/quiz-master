@@ -11,21 +11,16 @@ const highscorePage = document.getElementById("highscore-page");
 const history = document.getElementById("history");
 const sports = document.getElementById("sports");
 const science = document.getElementById("science");
-const musicCinema = document.getElementById("music-cinema");
 const geography = document.getElementById("geography");
-const artLiterature = document.getElementById("art-literatue");
 const categoriesPage = document.getElementById("categories-page");
 
 // Play area
-const soundOn = document.getElementById("sound-on");
-const SoundOff = document.getElementById("sound-off");
 let timer = document.getElementById("timer");
 const question = document.getElementById("question");
 const answerA = document.getElementById("answer-a");
 const answerB = document.getElementById("answer-b");
 const answerC = document.getElementById("answer-c");
 const answerD = document.getElementById("answer-d");
-const next = document.getElementById("next-question");
 const playArea = document.getElementById("play-area");
 let questionNumber = document.getElementById("question-number");
 let scorePoints = document.getElementById("score-points");
@@ -46,7 +41,7 @@ const feedbackPage = document.getElementById("feedback-page");
 const totalScore = document.getElementById("total-score");
 
 // Highscore
-const close = document.getElementById("close")
+const close = document.getElementById("close");
 const noOfHighScore = 5;
 const higherScores = 'highscores';
 const highScores = JSON.parse(localStorage.getItem(higherScores)) ?? [];
@@ -125,8 +120,8 @@ function askRamdomQuestion () {
 /* Loops through the questions and answers and loads 
 them into the play area. */
 function loadQuestion () {
-    questionCounter ++
-    questionNumber.innerText = questionCounter
+    questionCounter ++;
+    questionNumber.innerText = questionCounter;
     for (questionOption in availableQuestions) {
         question.innerHTML = availableQuestions[questionOption].question;
         answerA.innerHTML = availableQuestions[questionOption].A; 
@@ -172,9 +167,9 @@ function checkAnswer () {
 
 /* Adds 10 points to the score each time the player gets the correct answer. */
 function addScore () {
-    score += 10
-    scorePoints.innerHTML = score
-    totalScore.innerHTML = score
+    score += 10;
+    scorePoints.innerHTML = score;
+    totalScore.innerHTML = score;
 }
 
 /* When the question number reaches the total question number, hides the play area and

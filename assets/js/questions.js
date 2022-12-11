@@ -490,7 +490,7 @@ const sportsQuestions = [
         B : "17",
         C : "9",
         D : "10",
-        Answer : "D", 
+        Answer : "C", 
     },
 ]
    
@@ -690,10 +690,10 @@ const scienceQuestions = [
     },
     {
         question : "Potassium nitrate is used in",
-        A : "medicine",
-        B : "fertiliser",
-        C : "salt",
-        D : "glass",
+        A : "Medicine",
+        B : "Fertiliser",
+        C : "Salt",
+        D : "Glass",
         Answer : "B", 
     },
     {
