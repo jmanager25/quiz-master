@@ -204,10 +204,6 @@ main {
     list-style: none;
 }
 
-#close {
-    margin: 20px;
-}
-
 /* Rules Section */
 
 #rules-section {
@@ -342,7 +338,7 @@ main {
         width: 45%;
         padding: 25px;
         border-radius: 10px;
-        margin: 19px;
+        margin: 12px;
         background-color: #F1F2ED;
     }
 
@@ -426,18 +422,42 @@ main {
     }
 }
 
-/* From 372px wide and down */
+/* From 425px wide and down */
 
-@media screen and (max-width: 372px) {
+@media screen and (max-width: 425px) {
+
+    main {
+        height: 100%;
+        width: 100%;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    h2, h3 {
+        font-size: 18px;
+    }
 
     /* Landing Page */
+
+    .landing-page h2 {
+        margin: 50px 5px 50px;
+        font-size: 18px;
+    }   
 
     .play-btn {
         margin: 10px;
     }
 
+    #play {
+        width: 80%;
+        margin-top: 15px;
+    }
+
     .landing-page p {
-        margin: 5px;
+        margin: 40px;
+        font-size: 16px;
     }
 
     .landing-page-btn {
@@ -448,11 +468,17 @@ main {
 
     #rules {
         margin-bottom: 10px;
+        width: 76%;
+    }
+
+    #highscore-button {
+        width: 76%;
     }
 
     #username {
-        margin: 25px;
-        width: 65%;
+        margin: 30px;
+        width: 70%;
+        padding: 10px;
     }
 
     /* Play Area */
@@ -470,7 +496,7 @@ main {
     }
 
     #question {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     /* Feedback Area */
@@ -480,9 +506,9 @@ main {
     } 
 } 
 
-/* From 500px wide and down */
+/* From 350px wide and down */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 350px) {
 
     body {
         font-size: 16px;
@@ -514,6 +540,7 @@ main {
 
     #play {
         width: 80%;
+        margin-top: 0;
     }
 
     .btn {
