@@ -197,6 +197,7 @@ function startTimer () {
         if (timeToAnswer === 0) {
             stopTimer();
             disabled();
+            finishGame();
             setTimeout( () =>  { 
                 startTimer();
                 askRamdomQuestion();

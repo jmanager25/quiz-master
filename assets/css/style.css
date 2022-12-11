@@ -14,8 +14,6 @@ html {
 body {
     font-family: roboto, sans-serif;
     color: #ffffff;
-  /*  background: url("../images/background.jpg") no-repeat center center fixed;
-    background-size: cover; */
     font-size: 25px;
     display: flex;
     justify-content: center;
@@ -26,13 +24,7 @@ body {
 h1, h2, h3 {
     font-family: montserrat, sans-serif;
     font-size: 30px;
-}
-
-/* Heading */
-.heading {
-    text-transform: uppercase;
-    text-align: center;
-    margin: 20px;
+    color: #ad987d;
 }
 
 /* Game area */
@@ -56,8 +48,8 @@ main {
     padding: 20px;
     width: 130px;
     border-radius: 5px;
-    background-color: #F1F2ED;
-    color: #2F2F2F;
+    background-color: #e1e1e1;
+    color: #212123;
     font-size: 16px;
 }
 
@@ -106,7 +98,8 @@ main {
     padding: 30px;
     border-radius: 10px;
     margin: 19px;
-    background-color: #F1F2ED;
+    background-color: #e1e1e1;
+    color: #212123;
 }
 
 /* Play area */
@@ -155,6 +148,8 @@ main {
     margin: 10px;
     border-radius: 15px;
     text-align: center;
+    background-color: #e1e1e1;
+    color: #212123;
 }
 
 /* Feeback area */
