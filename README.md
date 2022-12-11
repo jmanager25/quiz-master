@@ -64,7 +64,7 @@ The Play area is the main area of the quiz, it is where the users test their kno
 
 The feedback page is a simple page where the player can see his/her total score. There is a play again button that leads the player to the landing.
 
-![feedback page](assets/images/features/feeback-page.png)
+![feedback page](assets/images/features/feedback-page.png)
 
 #### The Rules Page
 
@@ -79,6 +79,14 @@ The high score page is where the player can see the 5 highest scores. There is a
 ![The high score page](assets/images/features/high%20score.png)
 
 ### Future Features
+
+Future implementations are:
+* Two more categories would be added: art/literature and music/cinema.
+* Every category has its own background, related to the category.
+* A positive sound for the right answer and a sad sound for the wrong one. The player could change the volume or turn it off. 
+* When the wrong answer is chosen, the right answer will turn green. So that the player gets the chance to learn what the right answer is. 
+* A high score per category. 
+* Add more questions to every catgory. So that frequent players still get diverse questions.
 
 
 
