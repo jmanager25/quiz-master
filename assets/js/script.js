@@ -8,14 +8,9 @@ let userName = document.getElementById("username");
 const highscorePage = document.getElementById("highscore-page");
 
 // Categories
-const history = document.getElementById("history");
-const sports = document.getElementById("sports");
-const science = document.getElementById("science");
-const geography = document.getElementById("geography");
 const categoriesPage = document.getElementById("categories-page");
 
 // Play area
-let timer = document.getElementById("timer");
 const question = document.getElementById("question");
 const answerA = document.getElementById("answer-a");
 const answerB = document.getElementById("answer-b");
@@ -34,17 +29,14 @@ let timeToAnswer = 20;
 let countDown;
 
 // Feedback area
-let feedbackQuestion = document.getElementsByClassName("feedback-content-question");
-let feedbackAnswer = document.getElementsByClassName("feedback-content-result");
 const playAgain = document.getElementById("play-again");
 const feedbackPage = document.getElementById("feedback-page");
 const totalScore = document.getElementById("total-score");
 
 // Highscore
-const close = document.getElementById("close");
 const noOfHighScore = 5;
 const higherScores = 'highscores';
-const highScores = JSON.parse(localStorage.getItem(higherScores)) ?? [];
+const highScores = JSON.parse(localStorage.getItem(higherScores)) || [];
 
 // Rules 
 const rulesPage = document.getElementById("rules-section");
@@ -56,19 +48,19 @@ play.addEventListener("click", function () {
         landingPage.classList.add("display");
         categoriesPage.classList.remove("display");    
     }
-})
+});
 
 // shows the rules page when users clicks the rules button.
     rules.addEventListener("click", function () {
         landingPage.classList.add("display");
         rulesPage.classList.remove("display");
-    })
+    });
 
 // shows the highscore page when users click the hiscore button.
     highscoreBtn.addEventListener("click", function () {
         landingPage.classList.add("display");
         highscorePage.classList.remove("display");
-    }) 
+    }); 
 
 
 /* When player clicks on desired categorie it sorts the corresponding 
@@ -106,7 +98,7 @@ function getQuestions () {
                 loadQuestion();
                 startTimer(); 
             }
-        })
+        });
     }
 }
 
@@ -122,7 +114,7 @@ them into the play area. */
 function loadQuestion () {
     questionCounter ++;
     questionNumber.innerText = questionCounter;
-    for (questionOption in availableQuestions) {
+    for (let questionOption in availableQuestions) {
         question.innerHTML = availableQuestions[questionOption].question;
         answerA.innerHTML = availableQuestions[questionOption].A; 
         answerB.innerHTML = availableQuestions[questionOption].B;
@@ -133,9 +125,9 @@ function loadQuestion () {
 
 /* when the players select their answer moves on to the next question. */
 function nextQuestion () {
-    answerButtons = document.getElementsByClassName('answer')
+    answerButtons = document.getElementsByClassName('answer');
     for (let answerButton of answerButtons) {
-        answerButton.addEventListener('click', checkAnswer)
+        answerButton.addEventListener('click', checkAnswer);
     }
 }
 
@@ -143,26 +135,27 @@ function nextQuestion () {
 function checkAnswer () {
     disabled();
     stopTimer();
-    if (this.getAttribute('data-type') === availableQuestions[questionOption].Answer) {
-        this.classList.add('correct');
-        addScore();
-        setTimeout( () =>  { 
-            startTimer();
-            this.classList.remove('correct');     
-            finishGame();
-            askRamdomQuestion();
-            loadQuestion();                
-        }, 2000)                
-    } else {
-        this.classList.add('incorrect');
-        setTimeout( () =>  { 
-            startTimer();
-            this.classList.remove('incorrect');     
-            finishGame();
-            askRamdomQuestion(); 
-            loadQuestion(); 
-        }, 2000)
-    }
+    for (let questionOption in availableQuestions) {         
+        if (this.getAttribute('data-type') === availableQuestions[questionOption].Answer) {
+            this.classList.add('correct');
+            addScore();
+            setTimeout( () =>  { 
+                startTimer();
+                this.classList.remove('correct');     
+                finishGame();
+                askRamdomQuestion();
+                loadQuestion();                
+            }, 2000);                
+        } else {
+            this.classList.add('incorrect');
+            setTimeout( () =>  { 
+                startTimer();
+                this.classList.remove('incorrect');     
+                finishGame();
+                askRamdomQuestion(); 
+                loadQuestion(); 
+            }, 2000);
+   }    }
 }   
 
 /* Adds 10 points to the score each time the player gets the correct answer. */
@@ -197,7 +190,7 @@ function startTimer () {
                 startTimer();
                 askRamdomQuestion();
                 loadQuestion();
-               }, 2000)            
+               }, 2000);            
         }
     }, 1000);
 }
@@ -214,7 +207,7 @@ function saveHighScore () {
     const newScore = {
         name : userName.value,
         score : score
-    }
+    };
     highScores.push(newScore);
     highScores.sort((a, b) => b.score - a.score);
     highScores.splice(noOfHighScore);
@@ -229,20 +222,20 @@ highScoresList.innerHTML = highScores
 .join('');
 
 /* When the users clicks on the home buttons, return to the landig page */
-homeBtns = document.getElementsByClassName("home")
-for (homeBtn of homeBtns) {
+homeBtns = document.getElementsByClassName("home");
+for (let homeBtn of homeBtns) {
     homeBtn.addEventListener("click", function() {
         landingPage.classList.remove("display");
         rulesPage.classList.add("display");
         highscorePage.classList.add("display");
-    })
+    });
 }
 
 /* When the user clicks on play again button on feedback page, reloads the 
 page and return to home page */
 playAgain.addEventListener("click", function() {
     window.location.href = "index.html";
-})
+});
 
 /* Disable the buttons once the users clicks on an answers or the time runs out
  and enables them for the next question. */
@@ -252,7 +245,7 @@ function disabled () {
         answerButton.disabled = true;
         setTimeout( () =>  { 
            answerButton.disabled = false;
-        }, 2000)
+        }, 2000);
     }
 }
 

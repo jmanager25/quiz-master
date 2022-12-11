@@ -105,6 +105,33 @@ For this project I have used the following technologies:
 
 ## Testing 
 
+### Manual Testing 
+
+* All buttons works and opens to the correct sections.
+* The website is fully responsive on all devices present on google dev tools.
+* The data is stored and retrieved correctly from the localStorage.
+
+### W3C Validator 
+ 
+The W3C validator was used to validate the html file and it passed with no issue.
+
+![W3C Validation image](assets/images/test/w3c-validator.png)
+
+### W3C CSS Validator 
+
+For the css file, w3c validator was used and it also passed with no issue.
+
+[W3C CSS Validation image](assets/images/test/css-validator.png)
+
+### JSHint Validator
+
+JSHint Validator has been used to validate the 2 javaScript file and the result are below:
+
+* ![Questions file](assets/images/test/questions.png)
+
+For this file it stated that there are four unused variables, however those variables are being used on the scrip.js file. 
+
+* ![Script file](assets/images/test/script.png)
 
 ## Deployment & Local Development
 

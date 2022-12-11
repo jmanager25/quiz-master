@@ -233,7 +233,7 @@ const historyQuestions = [
         D : "1940",
         Answer : "B",  
     },
-]
+];
 // Sports Questions
 const sportsQuestions = [
     {
@@ -492,7 +492,7 @@ const sportsQuestions = [
         D : "10",
         Answer : "C", 
     },
-]
+];
    
 // Science Questions
 const scienceQuestions = [
@@ -704,7 +704,7 @@ const scienceQuestions = [
         D : "Silver",
         Answer : "B", 
     },
-]
+];
 // Geography Questions
 const geographyQuestions = [
     {
@@ -947,4 +947,4 @@ const geographyQuestions = [
         D : "Wales",
         Answer : "C", 
     },
-]
+];
