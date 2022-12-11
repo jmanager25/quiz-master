@@ -136,6 +136,23 @@ For this file it stated that there are four unused variables, however those vari
 For this file i got five warnings, six undefined variables, and two unused variables.
 Regarding the "Functions declared within loops referencing an outer scoped variable may lead to confusing semantics", i didnt manage to find another way to write the code without getting those warning.
 
+### Lighthouse
+
+Lighthouse was used to test the performance, accessibility, best practices and SEO of the website:
+
+* ![Lighthouse](assets/images/test/ligthouse.png)
+
+### Bugs 
+
+During the development of this project i encountered many bugs, i will list the main ones below:
+
+* The nextQuestion function was not working properly, when I clicked on the questions the next question was not loading.  Solution - I fixed it by adding asRamdomQuestion function to it.
+
+* The quiz only load 8 questions into the play area. Solution - created a separated function and moved the if statement from nextQuestion function to that new function(checkAnswer).
+
+* The timer Runs too fast when I answer the question fast - Solution - I added the button disabled property when the user clicks on an answer.
+
+* The play again button was not returning to the landing page. Solution - I set the windows.location.href with the url of the index.html.
 
 ## Deployment & Local Development
 
