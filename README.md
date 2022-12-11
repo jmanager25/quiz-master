@@ -88,10 +88,20 @@ Future implementations are:
 * A high score per category. 
 * Add more questions to every catgory. So that frequent players still get diverse questions.
 
-
-
 ## Technologies Used 
 
+For this project I have used the following technologies: 
+
+* HTML  -  To add structure to the webpage.
+* CSS  -  To Style the Webpage.
+* JavaScript  -  To add functionality to the Webpage.
+* JSHint  -  To validate the JavaScript code.
+* AM I Responsive  -  To check the responsiveness of the webpage.
+* Git  -  For version control.
+* GitHub  -  To store and deploy the webpage.
+* Chrome Developer Tool  -  To debug and test the webpage.
+* W3C Validator  -  To validate html code.
+* Jigsaw CSS Validator  -  To validate CSS code.
 
 ## Testing 
 
