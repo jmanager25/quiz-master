@@ -177,19 +177,19 @@ Github Pages was used to deploy the live website. The instructions to achieve th
 ### Content 
 
 * Sports quiz questions:
-  * https://www.goal.com/en/news/best-football-quiz-questions-trivia-answers/1dfwcyp3388zg1lon8wlit8q42 
-  * https://parade.com/1182514/marynliles/sports-trivia/  
+  * (https://www.goal.com/en/news/best-football-quiz-questions-trivia-answers 1dfwcyp3388zg1lon8wlit8q42)
+  * (https://parade.com/1182514/marynliles/sports-trivia/) 
 
 * Science quiz questions:
-  * https://www.indiabix.com/general-knowledge/general-science/036013 
-  * https://www.rd.com/list/science-trivia-questions/ 
-  * https://www.radiotimes.com/quizzes/pub-quiz-science/ 
+  * (https://www.indiabix.com/general-knowledge/general-science/036013) 
+  * (https://www.rd.com/list/science-trivia-questions/) 
+  * (https://www.radiotimes.com/quizzes/pub-quiz-science/) 
 
 * Geography quiz questions: 
-  * https://parade.com/1246355/marynliles/geography-trivia/ 
+  * (https://parade.com/1246355/marynliles/geography-trivia/) 
 
 * history quiz questions:
-  * https://thoughtcatalog.com/katee-fletcher/2020/04/history-trivia-questions/
+  * (https://thoughtcatalog.com/katee-fletcher/2020/04/history-trivia-questions/)
 
 ### Media 
 
@@ -198,31 +198,38 @@ Github Pages was used to deploy the live website. The instructions to achieve th
 ### Code 
 
 * How to use localstorage:
-  * https://blog.logrocket.com/localstorage-javascript-complete-guide/ 
-  * https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68  
+  * (https://blog.logrocket.com/localstorage-javascript-complete-guide/) 
+  * (https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68)  
 
 * function that returns a random question:
-  * https://stackoverflow.com/questions/69908649/the-random-question-generator-is-only-prompting-1-question-in-the-array-of-objec 
+  * (https://stackoverflow.com/questions/69908649/the-random-question-generator-is-only-prompting-1-question-in-the-array-of-objec) 
 
 * Build start and stop timer:
-  * https://www.youtube.com/watch?v=ubLC1JxMqfY&ab_channel=dcode 
+  * (https://www.youtube.com/watch?v=ubLC1JxMqfY&ab_channel=dcode) 
 
 *  Code to save highScores in the localStorage:
-  * https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68 
+  * (https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68) 
 
 * How to use windows.location:
-  * https://www.seoquake.com/blog/relative-or-absolute-urls/
-  * https://stackoverflow.com/questions/503093/how-do-i-redirect-to-another-webpage 
+  * (https://www.seoquake.com/blog/relative-or-absolute-urls/)
+  * (https://stackoverflow.com/questions/503093/how-do-i-redirect-to-another-webpage) 
 
 * How to disable a button:
-  * https://flaviocopes.com/how-to-disable-button-javascript/ 
+  * (https://flaviocopes.com/how-to-disable-button-javascript/) 
 
 * Hover effect:
-  * https://www.developerdrive.com/8-simple-css-hover-effects/
+  * (https://www.developerdrive.com/8-simple-css-hover-effects/)
 
 
+## Acknowledgments
+
+I would like to thank the following people:
+
+* My girlfriend for her patience and support while I was working on the project
+* My mentor, Mitko, for his guidance throughout the project
+* My collegues from code institute for the support and motivation on Slack
   
 
 
-## Acknowledgements
+
 
