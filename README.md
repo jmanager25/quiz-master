@@ -133,6 +133,10 @@ For this file it stated that there are four unused variables, however those vari
 
 * ![Script file](assets/images/test/script.png)
 
+For this file i got five warnings, six undefined variables, and two unused variables.
+Regarding the "Functions declared within loops referencing an outer scoped variable may lead to confusing semantics", i didnt manage to find another way to write the code without getting those warning.
+
+
 ## Deployment & Local Development
 
 
