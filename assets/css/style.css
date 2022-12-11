@@ -53,6 +53,14 @@ main {
     font-size: 16px;
 }
 
+/* code from - https://www.developerdrive.com/8-simple-css-hover-effects/ */
+.btn:hover {
+    background: rgba(0,0,0,0);
+	color: #ad987d;
+	box-shadow: inset 0 0 0 3px #ad987d;
+}
+
+
 /* Landing page */
 .landing-page {
     height: 100%;
@@ -150,6 +158,11 @@ main {
     text-align: center;
     background-color: #e1e1e1;
     color: #212123;
+}
+
+.answer:hover {
+    color: #ad987d;
+	box-shadow: inset 0 0 0 3px #212123;
 }
 
 /* Feeback area */

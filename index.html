@@ -48,17 +48,17 @@
                         <div id="score-points">0</div>
                     </div>
                     <div class="timer-container">
-                        <div id="timer">30</div>
+                        <div id="timer">20</div>
                         <div class="timer-icon"><i class="fa-solid fa-stopwatch-20"></i></div>
                     </div>
                     <div><span id="question-number"></span>/10</div>
                 </div>
                 <h3 class="text-align" id="question"></h3>
                 <div class="answer-buttons text-align">
-                    <button data-type="A" id="answer-a" class="answer btn" onclick="nextQuestion()"></button>
-                    <button data-type="B" id="answer-b" class="answer btn" onclick="nextQuestion()"></button>
-                    <button data-type="C" id="answer-c" class="answer btn" onclick="nextQuestion()"></button>
-                    <button data-type="D" id="answer-d" class="answer btn" onclick="nextQuestion()"></button>
+                    <button data-type="A" id="answer-a" class="answer" onclick="nextQuestion()"></button>
+                    <button data-type="B" id="answer-b" class="answer" onclick="nextQuestion()"></button>
+                    <button data-type="C" id="answer-c" class="answer" onclick="nextQuestion()"></button>
+                    <button data-type="D" id="answer-d" class="answer" onclick="nextQuestion()"></button>
             </div> 
         </section>
         <!-- Feedback area -->
@@ -87,9 +87,15 @@
             <div class="rules-container">
                 <h2 class="text-align">Rules</h2>
                 <div class="text-align">
-                    <p class="rules-content">To be able to play the game you must enter your username and then press play. There are 4 categories to choose from, History, Sports, Science and Geography.</p>
-                    <p class="rules-content">The quiz consists of 10 questions, and you are awarded 10 points for each correct answer. You also have 30 second to answer each question.</p>
-                    <p class="rules-content">After you have completed the quiz you will be redirected to a new page where you will see your score and wether or not you made it to the top 5.</p>
+                    <p class="rules-content">
+                        To be able to play the game you must enter your username and then press play. There are 4 categories to choose from, History, Sports, Science and Geography.
+                    </p>
+                    <p class="rules-content">
+                        The quiz consists of 10 questions, and you are awarded 10 points for each correct answer. You also have 20 second to answer each question.
+                    </p>
+                    <p class="rules-content">
+                        After you have completed the quiz you will be redirected to a new page where you will see your score and wether or not you made it to the top 5.
+                    </p>
                 </div>
                 <div class="text-align rules-btn-container">
                     <button class="btn home">Home</button>
@@ -97,11 +103,9 @@
             </div>
         </section>
     </main>
-    
     <!-- JavaScript files -->
     <script src="assets/js/script.js"></script>
     <script src="assets/js/questions.js"></script>
-
     <!-- FontAwesome script-->
     <script src="https://kit.fontawesome.com/d2c05d750e.js" crossorigin="anonymous"></script>
 </body>

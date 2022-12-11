@@ -35,7 +35,7 @@ let totalQuestions = 10;
 let score = 0;
 let availableQuestions;
 let sortQuestion = [];
-let timeToAnswer = 30;
+let timeToAnswer = 20;
 let countDown;
 
 // Feedback area
@@ -190,7 +190,7 @@ function finishGame () {
 // starts the countdown
 /* code based on a youtube tutorial - https://www.youtube.com/watch?v=ubLC1JxMqfY&ab_channel=dcode */
 function startTimer () {
-    timeToAnswer = 30;
+    timeToAnswer = 20;
     countDown = setInterval(function () {
         timeToAnswer -= 1;
         timerDisplayer.innerHTML = timeToAnswer;
