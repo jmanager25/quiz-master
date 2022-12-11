@@ -156,13 +156,72 @@ During the development of this project i encountered many bugs, i will list the 
 
 ## Deployment & Local Development
 
+### Deployment 
+
+Github Pages was used to deploy the live website. The instructions to achieve this are below:
+
+* Log in (or sign up) to Github
+* Find the repository for this project, Quiz Master
+* Click on the Settings
+* Click on the Pages, on the left side navigation bar
+* Under "Branch" click the drop-down menu and select "main"
+* click save, the site is now deployed and a link is provided
+
+### How To Fork  
+
+* Log in (or sign up) to Github and find this Project 
+* Click the Fork button in the top right corner and create a copy in your repository
 
 ## Credits
+
 ### Content 
+
+* Sports quiz questions:
+  * https://www.goal.com/en/news/best-football-quiz-questions-trivia-answers/1dfwcyp3388zg1lon8wlit8q42 
+  * https://parade.com/1182514/marynliles/sports-trivia/  
+
+* Science quiz questions:
+  * https://www.indiabix.com/general-knowledge/general-science/036013 
+  * https://www.rd.com/list/science-trivia-questions/ 
+  * https://www.radiotimes.com/quizzes/pub-quiz-science/ 
+
+* Geography quiz questions: 
+  * https://parade.com/1246355/marynliles/geography-trivia/ 
+
+* history quiz questions:
+  * https://thoughtcatalog.com/katee-fletcher/2020/04/history-trivia-questions/
 
 ### Media 
 
-### Code
+* Background image - unsplash.com
+
+### Code 
+
+* How to use localstorage:
+  * https://blog.logrocket.com/localstorage-javascript-complete-guide/ 
+  * https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68  
+
+* function that returns a random question:
+  * https://stackoverflow.com/questions/69908649/the-random-question-generator-is-only-prompting-1-question-in-the-array-of-objec 
+
+* Build start and stop timer:
+  * https://www.youtube.com/watch?v=ubLC1JxMqfY&ab_channel=dcode 
+
+*  Code to save highScores in the localStorage:
+  * https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68 
+
+* How to use windows.location:
+  * https://www.seoquake.com/blog/relative-or-absolute-urls/
+  * https://stackoverflow.com/questions/503093/how-do-i-redirect-to-another-webpage 
+
+* How to disable a button:
+  * https://flaviocopes.com/how-to-disable-button-javascript/ 
+
+* Hover effect:
+  * https://www.developerdrive.com/8-simple-css-hover-effects/
+
+
+  
 
 
 ## Acknowledgements
